@@ -56,34 +56,34 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Assign a name to:Images matching rules
     Select the image type:Grayscale image
     Name to assign these images:DNA
-    Match metadata:\x5B{u\'OrigPhGolgi\'\x3A u\'Plate\', u\'IllumPhGolgi\'\x3A u\'Plate\', u\'OrigERSytoBleed\'\x3A u\'Plate\', u\'IllumHoechst\'\x3A u\'Plate\', u\'IllumERSyto\'\x3A u\'Plate\', u\'OrigERSyto\'\x3A u\'Plate\', u\'IllumERSytoBleed\'\x3A u\'Plate\', u\'OrigHoechst\'\x3A u\'Plate\', u\'OrigMito\'\x3A u\'Plate\', u\'IllumMito\'\x3A u\'Plate\'}, {u\'OrigPhGolgi\'\x3A u\'Well\', u\'IllumPhGolgi\'\x3A None, u\'OrigERSytoBleed\'\x3A u\'Well\', u\'IllumHoechst\'\x3A None, u\'IllumERSyto\'\x3A None, u\'OrigERSyto\'\x3A u\'Well\', u\'IllumERSytoBleed\'\x3A None, u\'OrigHoechst\'\x3A u\'Well\', u\'OrigMito\'\x3A u\'Well\', u\'IllumMito\'\x3A None}, {u\'OrigPhGolgi\'\x3A u\'Site\', u\'IllumPhGolgi\'\x3A None, u\'OrigERSyto\'\x3A u\'Site\', u\'OrigERSytoBleed\'\x3A u\'Site\', u\'IllumHoechst\'\x3A None, u\'OrigHoechst\'\x3A u\'Site\', u\'IllumERSytoBleed\'\x3A None, u\'IllumERSyto\'\x3A None, u\'IllumMito\'\x3A None, u\'OrigMito\'\x3A u\'Site\'}\x5D
+    Match metadata:\x5B{u\'OrigAGP\'\x3A u\'Plate\', u\'IllumAGP\'\x3A u\'Plate\', u\'OrigRNA\'\x3A u\'Plate\', u\'IllumDNA\'\x3A u\'Plate\', u\'IllumER\'\x3A u\'Plate\', u\'OrigER\'\x3A u\'Plate\', u\'IllumRNA\'\x3A u\'Plate\', u\'OrigDNA\'\x3A u\'Plate\', u\'OrigMito\'\x3A u\'Plate\', u\'IllumMito\'\x3A u\'Plate\'}, {u\'OrigAGP\'\x3A u\'Well\', u\'IllumAGP\'\x3A None, u\'OrigRNA\'\x3A u\'Well\', u\'IllumDNA\'\x3A None, u\'IllumER\'\x3A None, u\'OrigER\'\x3A u\'Well\', u\'IllumRNA\'\x3A None, u\'OrigDNA\'\x3A u\'Well\', u\'OrigMito\'\x3A u\'Well\', u\'IllumMito\'\x3A None}, {u\'OrigAGP\'\x3A u\'Site\', u\'IllumAGP\'\x3A None, u\'OrigER\'\x3A u\'Site\', u\'OrigRNA\'\x3A u\'Site\', u\'IllumDNA\'\x3A None, u\'OrigDNA\'\x3A u\'Site\', u\'IllumRNA\'\x3A None, u\'IllumER\'\x3A None, u\'IllumMito\'\x3A None, u\'OrigMito\'\x3A u\'Site\'}\x5D
     Image set matching method:Metadata
     Set intensity range from:Image metadata
     Assignments count:10
     Single images count:0
     Select the rule criteria:and (metadata does ChannelNumber "1")
-    Name to assign these images:OrigHoechst
+    Name to assign these images:OrigDNA
     Name to assign these objects:Cell
     Select the image type:Grayscale image
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
     Select the rule criteria:and (metadata does ChannelNumber "2")
-    Name to assign these images:OrigERSyto
+    Name to assign these images:OrigER
     Name to assign these objects:Nucleus
     Select the image type:Grayscale image
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
     Select the rule criteria:and (metadata does ChannelNumber "3")
-    Name to assign these images:OrigERSytoBleed
+    Name to assign these images:OrigRNA
     Name to assign these objects:Cytoplasm
     Select the image type:Grayscale image
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
     Select the rule criteria:and (metadata does ChannelNumber "4")
-    Name to assign these images:OrigPhGolgi
+    Name to assign these images:OrigAGP
     Name to assign these objects:Speckle
     Select the image type:Grayscale image
     Set intensity range from:Image metadata
@@ -96,29 +96,29 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
-    Select the rule criteria:and (file does endwith "IllumHoechst.mat")
-    Name to assign these images:IllumHoechst
+    Select the rule criteria:and (file does endwith "IllumDNA.mat")
+    Name to assign these images:IllumDNA
     Name to assign these objects:Object2
     Select the image type:Illumination function
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedOutlines
-    Select the rule criteria:and (file does endwith "IllumERSyto.mat")
-    Name to assign these images:IllumERSyto
+    Select the rule criteria:and (file does endwith "IllumER.mat")
+    Name to assign these images:IllumER
     Name to assign these objects:Object3
     Select the image type:Illumination function
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedOutlines
-    Select the rule criteria:and (file does endwith "IllumERSytoBleed.mat")
-    Name to assign these images:IllumERSytoBleed
+    Select the rule criteria:and (file does endwith "IllumRNA.mat")
+    Name to assign these images:IllumRNA
     Name to assign these objects:Object4
     Select the image type:Illumination function
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedOutlines
-    Select the rule criteria:and (file does endwith "IllumPhGolgi.mat")
-    Name to assign these images:IllumPhGolgi
+    Select the rule criteria:and (file does endwith "IllumAGP.mat")
+    Name to assign these images:IllumAGP
     Name to assign these objects:Object5
     Select the image type:Illumination function
     Set intensity range from:Image metadata
@@ -138,25 +138,25 @@ Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_win
     Metadata category:Plate
 
 CorrectIlluminationApply:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
-    Select the input image:OrigHoechst
-    Name the output image:Hoechst
-    Select the illumination function:IllumHoechst
+    Select the input image:OrigDNA
+    Name the output image:DNA
+    Select the illumination function:IllumDNA
     Select how the illumination function is applied:Divide
-    Select the input image:OrigERSyto
-    Name the output image:ERSyto
-    Select the illumination function:IllumERSyto
+    Select the input image:OrigER
+    Name the output image:ER
+    Select the illumination function:IllumER
     Select how the illumination function is applied:Divide
-    Select the input image:OrigPhGolgi
-    Name the output image:PhGolgi
-    Select the illumination function:IllumPhGolgi
+    Select the input image:OrigAGP
+    Name the output image:AGP
+    Select the illumination function:IllumAGP
     Select how the illumination function is applied:Divide
     Select the input image:OrigMito
     Name the output image:Mito
     Select the illumination function:IllumMito
     Select how the illumination function is applied:Divide
-    Select the input image:OrigERSytoBleed
-    Name the output image:ERSytoBleed
-    Select the illumination function:IllumERSytoBleed
+    Select the input image:OrigRNA
+    Name the output image:RNA
+    Select the illumination function:IllumRNA
     Select how the illumination function is applied:Divide
 
 MeasureImageQuality:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:5|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
@@ -188,7 +188,7 @@ MeasureImageQuality:[module_num:7|svn_version:\'Unknown\'|variable_revision_numb
     Threshold count:1
     Scale count:1
     Threshold count:1
-    Select the images to measure:OrigHoechst
+    Select the images to measure:OrigDNA
     Include the image rescaling value?:No
     Calculate blur metrics?:No
     Spatial scale for blur measurements:20
@@ -201,7 +201,7 @@ MeasureImageQuality:[module_num:7|svn_version:\'Unknown\'|variable_revision_numb
     Two-class or three-class thresholding?:Two classes
     Minimize the weighted variance or the entropy?:Weighted variance
     Assign pixels in the middle intensity class to the foreground or the background?:Background
-    Select the images to measure:OrigERSytoBleed
+    Select the images to measure:OrigRNA
     Include the image rescaling value?:No
     Calculate blur metrics?:No
     Spatial scale for blur measurements:20
@@ -224,7 +224,7 @@ FlagImage:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Skip image set if flagged?:No
     Flag is based on:Rules
     Select the object to be used for flagging:None
-    Which measurement?:ImageQuality_PercentMaximal_OrigHoechst
+    Which measurement?:ImageQuality_PercentMaximal_OrigDNA
     Flag images based on low values?:No
     Minimum value:0
     Flag images based on high values?:Yes
@@ -249,7 +249,7 @@ FlagImage:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Class number:2
 
 IdentifyPrimaryObjects:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:10|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
-    Select the input image:Hoechst
+    Select the input image:DNA
     Name the primary objects to be identified:Nuclei
     Typical diameter of objects, in pixel units (Min,Max):10,120
     Discard objects outside the diameter range?:Yes
@@ -293,7 +293,7 @@ IdentifySecondaryObjects:[module_num:10|svn_version:\'Unknown\'|variable_revisio
     Select the input objects:Nuclei
     Name the objects to be identified:Cells
     Select the method to identify the secondary objects:Watershed - Image
-    Select the input image:ERSytoBleed
+    Select the input image:RNA
     Number of pixels by which to expand the primary objects:10
     Regularization factor:0.05
     Name the outline image:CellOutlines
@@ -333,11 +333,11 @@ IdentifyTertiaryObjects:[module_num:11|svn_version:\'Unknown\'|variable_revision
 MeasureCorrelation:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Hidden:5
     Hidden:3
-    Select an image to measure:Hoechst
+    Select an image to measure:DNA
     Select an image to measure:Mito
-    Select an image to measure:ERSyto
-    Select an image to measure:ERSytoBleed
-    Select an image to measure:PhGolgi
+    Select an image to measure:ER
+    Select an image to measure:RNA
+    Select an image to measure:AGP
     Select where to measure correlation:Within objects
     Select an object to measure:Nuclei
     Select an object to measure:Cells
@@ -346,7 +346,7 @@ MeasureCorrelation:[module_num:12|svn_version:\'Unknown\'|variable_revision_numb
 MeasureGranularity:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Image count:5
     Object count:1
-    Select an image to measure:Hoechst
+    Select an image to measure:DNA
     Subsampling factor for granularity measurements:0.25
     Subsampling factor for background reduction:0.25
     Radius of structuring element:10
@@ -362,7 +362,7 @@ MeasureGranularity:[module_num:13|svn_version:\'Unknown\'|variable_revision_numb
     Select objects to measure:Nuclei
     Select objects to measure:Cytoplasm
     Object count:3
-    Select an image to measure:ERSyto
+    Select an image to measure:ER
     Subsampling factor for granularity measurements:0.25
     Subsampling factor for background reduction:0.25
     Radius of structuring element:10
@@ -371,7 +371,7 @@ MeasureGranularity:[module_num:13|svn_version:\'Unknown\'|variable_revision_numb
     Select objects to measure:Nuclei
     Select objects to measure:Cytoplasm
     Object count:3
-    Select an image to measure:PhGolgi
+    Select an image to measure:AGP
     Subsampling factor for granularity measurements:0.25
     Subsampling factor for background reduction:0.25
     Radius of structuring element:10
@@ -380,7 +380,7 @@ MeasureGranularity:[module_num:13|svn_version:\'Unknown\'|variable_revision_numb
     Select objects to measure:Cytoplasm
     Select objects to measure:Nuclei
     Object count:3
-    Select an image to measure:ERSytoBleed
+    Select an image to measure:RNA
     Subsampling factor for granularity measurements:0.25
     Subsampling factor for background reduction:0.25
     Radius of structuring element:10
@@ -391,10 +391,10 @@ MeasureGranularity:[module_num:13|svn_version:\'Unknown\'|variable_revision_numb
 
 MeasureObjectIntensity:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Hidden:5
-    Select an image to measure:Hoechst
-    Select an image to measure:ERSyto
-    Select an image to measure:ERSytoBleed
-    Select an image to measure:PhGolgi
+    Select an image to measure:DNA
+    Select an image to measure:ER
+    Select an image to measure:RNA
+    Select an image to measure:AGP
     Select an image to measure:Mito
     Select objects to measure:Nuclei
     Select objects to measure:Cytoplasm
@@ -440,9 +440,9 @@ MeasureObjectRadialDistribution:[module_num:18|svn_version:\'Unknown\'|variable_
     Hidden:4
     Hidden:3
     Hidden:1
-    Select an image to measure:ERSyto
-    Select an image to measure:ERSytoBleed
-    Select an image to measure:PhGolgi
+    Select an image to measure:ER
+    Select an image to measure:RNA
+    Select an image to measure:AGP
     Select an image to measure:Mito
     Select objects to measure:Cells
     Object to use as center?:These objects
@@ -467,10 +467,10 @@ MeasureTexture:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:3
     Hidden:5
     Hidden:3
     Hidden:3
-    Select an image to measure:Hoechst
-    Select an image to measure:ERSyto
-    Select an image to measure:ERSytoBleed
-    Select an image to measure:PhGolgi
+    Select an image to measure:DNA
+    Select an image to measure:ER
+    Select an image to measure:RNA
+    Select an image to measure:AGP
     Select an image to measure:Mito
     Select objects to measure:Cells
     Select objects to measure:Cytoplasm
@@ -514,7 +514,7 @@ SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Select the objects to save:None
     Select the module display window to save:None
     Select method for constructing file names:Single name
-    Select image name for file prefix:OrigHoechst
+    Select image name for file prefix:OrigDNA
     Enter single file name:\\\\g<Well>_s\\\\g<Site>_NucleiOutlines
     Number of digits:4
     Append a suffix to the image file name?:Yes
@@ -538,7 +538,7 @@ SaveImages:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Select the objects to save:None
     Select the module display window to save:None
     Select method for constructing file names:Single name
-    Select image name for file prefix:OrigHoechst
+    Select image name for file prefix:OrigDNA
     Enter single file name:\\\\g<Well>_s\\\\g<Site>_CellOutlines
     Number of digits:4
     Append a suffix to the image file name?:Yes
@@ -580,7 +580,7 @@ ExportToDatabase:[module_num:25|svn_version:\'Unknown\'|variable_revision_number
     Create one table per object, a single object table or a single object view?:One table per object type
     Enter an image url prepend if you plan to access your files via http:http\x3A//imageweb/images/CPALinks
     Write image thumbnails directly to the database?:Yes
-    Select the images for which you want to save thumbnails:CellOutlines,NucleiOutlines,OrigERSyto,OrigERSytoBleed,OrigHoechst,OrigMito,OrigPhGolgi
+    Select the images for which you want to save thumbnails:CellOutlines,NucleiOutlines,OrigER,OrigRNA,OrigDNA,OrigMito,OrigAGP
     Auto-scale thumbnail pixel intensities?:Yes
     Select the plate type:384
     Select the plate metadata:Plate
@@ -596,19 +596,19 @@ ExportToDatabase:[module_num:25|svn_version:\'Unknown\'|variable_revision_number
     Export object relationships?:No
     Overwrite without warning?:Data only
     Access CPA images via URL?:Yes
-    Select an image to include:OrigHoechst
+    Select an image to include:OrigDNA
     Use the image name for the display?:No
-    Image name:Hoechst
+    Image name:DNA
     Channel color:red
-    Select an image to include:OrigERSyto
+    Select an image to include:OrigER
     Use the image name for the display?:No
     Image name:ER_Syto
     Channel color:green
-    Select an image to include:OrigERSytoBleed
+    Select an image to include:OrigRNA
     Use the image name for the display?:No
     Image name:ER_Syto_Bleedthrough
     Channel color:blue
-    Select an image to include:OrigPhGolgi
+    Select an image to include:OrigAGP
     Use the image name for the display?:No
     Image name:Phaloidin_Golgi
     Channel color:yellow
@@ -637,7 +637,7 @@ ExportToDatabase:[module_num:25|svn_version:\'Unknown\'|variable_revision_number
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:Image
-    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigHoechst
+    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigDNA
     Select the Y-axis index:ImageNumber
 
 CreateBatchFiles:[module_num:26|svn_version:\'Unknown\'|variable_revision_number:6|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]

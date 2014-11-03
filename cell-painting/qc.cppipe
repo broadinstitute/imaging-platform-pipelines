@@ -38,34 +38,34 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Assign a name to:Images matching rules
     Select the image type:Grayscale image
     Name to assign these images:DNA
-    Match metadata:\x5B{u\'OrigPhGolgi\'\x3A u\'Plate\', u\'OrigERSyto\'\x3A u\'Plate\', u\'OrigERSytoBleed\'\x3A u\'Plate\', u\'OrigHoechst\'\x3A u\'Plate\', u\'OrigMito\'\x3A u\'Plate\'}, {u\'OrigPhGolgi\'\x3A u\'Well\', u\'OrigERSyto\'\x3A u\'Well\', u\'OrigERSytoBleed\'\x3A u\'Well\', u\'OrigHoechst\'\x3A u\'Well\', u\'OrigMito\'\x3A u\'Well\'}, {u\'OrigPhGolgi\'\x3A u\'Site\', u\'OrigERSyto\'\x3A u\'Site\', u\'OrigERSytoBleed\'\x3A u\'Site\', u\'OrigHoechst\'\x3A u\'Site\', u\'OrigMito\'\x3A u\'Site\'}\x5D
+    Match metadata:\x5B{u\'OrigAGP\'\x3A u\'Plate\', u\'OrigER\'\x3A u\'Plate\', u\'OrigRNA\'\x3A u\'Plate\', u\'OrigDNA\'\x3A u\'Plate\', u\'OrigMito\'\x3A u\'Plate\'}, {u\'OrigAGP\'\x3A u\'Well\', u\'OrigER\'\x3A u\'Well\', u\'OrigRNA\'\x3A u\'Well\', u\'OrigDNA\'\x3A u\'Well\', u\'OrigMito\'\x3A u\'Well\'}, {u\'OrigAGP\'\x3A u\'Site\', u\'OrigER\'\x3A u\'Site\', u\'OrigRNA\'\x3A u\'Site\', u\'OrigDNA\'\x3A u\'Site\', u\'OrigMito\'\x3A u\'Site\'}\x5D
     Image set matching method:Metadata
     Set intensity range from:Image metadata
     Assignments count:5
     Single images count:0
     Select the rule criteria:and (metadata does ChannelNumber "1")
-    Name to assign these images:OrigHoechst
+    Name to assign these images:OrigDNA
     Name to assign these objects:Cell
     Select the image type:Grayscale image
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
     Select the rule criteria:and (metadata does ChannelNumber "2")
-    Name to assign these images:OrigERSyto
+    Name to assign these images:OrigER
     Name to assign these objects:Nucleus
     Select the image type:Grayscale image
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
     Select the rule criteria:and (metadata does ChannelNumber "3")
-    Name to assign these images:OrigERSytoBleed
+    Name to assign these images:OrigRNA
     Name to assign these objects:Cytoplasm
     Select the image type:Grayscale image
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
     Select the rule criteria:and (metadata does ChannelNumber "4")
-    Name to assign these images:OrigPhGolgi
+    Name to assign these images:OrigAGP
     Name to assign these objects:Speckle
     Select the image type:Grayscale image
     Set intensity range from:Image metadata
@@ -113,7 +113,7 @@ MeasureImageQuality:[module_num:6|svn_version:\'Unknown\'|variable_revision_numb
     Threshold count:1
     Scale count:1
     Threshold count:1
-    Select the images to measure:OrigHoechst
+    Select the images to measure:OrigDNA
     Include the image rescaling value?:No
     Calculate blur metrics?:No
     Spatial scale for blur measurements:20
@@ -126,7 +126,7 @@ MeasureImageQuality:[module_num:6|svn_version:\'Unknown\'|variable_revision_numb
     Two-class or three-class thresholding?:Two classes
     Minimize the weighted variance or the entropy?:Weighted variance
     Assign pixels in the middle intensity class to the foreground or the background?:Background
-    Select the images to measure:OrigERSytoBleed
+    Select the images to measure:OrigRNA
     Include the image rescaling value?:No
     Calculate blur metrics?:No
     Spatial scale for blur measurements:20
@@ -164,7 +164,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Create one table per object, a single object table or a single object view?:Single object table
     Enter an image url prepend if you plan to access your files via http:http\x3A//imageweb/images/CPALinks
     Write image thumbnails directly to the database?:Yes
-    Select the images for which you want to save thumbnails:OrigERSyto,OrigERSytoBleed,OrigHoechst,OrigMito,OrigPhGolgi
+    Select the images for which you want to save thumbnails:OrigER,OrigRNA,OrigDNA,OrigMito,OrigAGP
     Auto-scale thumbnail pixel intensities?:Yes
     Select the plate type:384
     Select the plate metadata:Plate
@@ -180,19 +180,19 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Export object relationships?:No
     Overwrite without warning?:Data only
     Access CPA images via URL?:Yes
-    Select an image to include:OrigHoechst
+    Select an image to include:OrigDNA
     Use the image name for the display?:No
-    Image name:Hoechst
+    Image name:DNA
     Channel color:red
-    Select an image to include:OrigERSyto
+    Select an image to include:OrigER
     Use the image name for the display?:No
     Image name:ER_Syto
     Channel color:green
-    Select an image to include:OrigERSytoBleed
+    Select an image to include:OrigRNA
     Use the image name for the display?:No
     Image name:ER_Syto_Bleedthrough
     Channel color:blue
-    Select an image to include:OrigPhGolgi
+    Select an image to include:OrigAGP
     Use the image name for the display?:No
     Image name:Phalloidin_Golgi
     Channel color:yellow
@@ -213,7 +213,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:Image
-    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigHoechst
+    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigDNA
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
     Type of measurement to plot on the X-axis:Index
@@ -222,7 +222,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
-    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigERSyto
+    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigER
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
     Type of measurement to plot on the X-axis:Index
@@ -231,7 +231,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
-    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigERSytoBleed
+    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigRNA
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
     Type of measurement to plot on the X-axis:Index
@@ -240,7 +240,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
-    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigPhGolgi
+    Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigAGP
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
     Type of measurement to plot on the X-axis:Index
@@ -258,7 +258,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
-    Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigHoechst
+    Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigDNA
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
     Type of measurement to plot on the X-axis:Index
@@ -267,7 +267,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
-    Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigERSyto
+    Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigER
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
     Type of measurement to plot on the X-axis:Index
@@ -276,7 +276,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
-    Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigERSytoBleed
+    Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigRNA
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
     Type of measurement to plot on the X-axis:Index
@@ -285,7 +285,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
-    Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigPhGolgi
+    Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigAGP
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
     Type of measurement to plot on the X-axis:Index
@@ -299,7 +299,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the measurement display tool:Histogram
     Type of measurement to plot on the X-axis:Image
     Enter the object name:None
-    Select the X-axis measurement:ImageQuality_ThresholdOtsu_OrigHoechst_2W
+    Select the X-axis measurement:ImageQuality_ThresholdOtsu_OrigDNA_2W
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
@@ -308,7 +308,7 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the measurement display tool:Histogram
     Type of measurement to plot on the X-axis:Image
     Enter the object name:None
-    Select the X-axis measurement:ImageQuality_ThresholdOtsu_OrigERSytoBleed_3FW
+    Select the X-axis measurement:ImageQuality_ThresholdOtsu_OrigRNA_3FW
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
