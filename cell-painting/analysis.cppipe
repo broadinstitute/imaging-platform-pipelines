@@ -602,15 +602,15 @@ ExportToDatabase:[module_num:25|svn_version:\'Unknown\'|variable_revision_number
     Channel color:red
     Select an image to include:OrigER
     Use the image name for the display?:No
-    Image name:ER_Syto
+    Image name:ER
     Channel color:green
     Select an image to include:OrigRNA
     Use the image name for the display?:No
-    Image name:ER_Syto_Bleedthrough
+    Image name:RNA
     Channel color:blue
     Select an image to include:OrigAGP
     Use the image name for the display?:No
-    Image name:Phaloidin_Golgi
+    Image name:AGP
     Channel color:yellow
     Select an image to include:OrigMito
     Use the image name for the display?:No

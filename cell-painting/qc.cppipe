@@ -186,15 +186,15 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Channel color:red
     Select an image to include:OrigER
     Use the image name for the display?:No
-    Image name:ER_Syto
+    Image name:ER
     Channel color:green
     Select an image to include:OrigRNA
     Use the image name for the display?:No
-    Image name:ER_Syto_Bleedthrough
+    Image name:RNA
     Channel color:blue
     Select an image to include:OrigAGP
     Use the image name for the display?:No
-    Image name:Phalloidin_Golgi
+    Image name:AGP
     Channel color:yellow
     Select an image to include:OrigMito
     Use the image name for the display?:No
@@ -252,45 +252,45 @@ ExportToDatabase:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:
     Select the Y-axis measurement:ImageQuality_PowerLogLogSlope_OrigMito
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
-    Type of measurement to plot on the X-axis:Index
+    Type of measurement to plot on the X-axis:Image
     Enter the object name:None
-    Select the X-axis measurement:None
+    Select the X-axis measurement:ImageQuality_StdIntensity_OrigDNA
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
     Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigDNA
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
-    Type of measurement to plot on the X-axis:Index
+    Type of measurement to plot on the X-axis:Image
     Enter the object name:None
-    Select the X-axis measurement:None
+    Select the X-axis measurement:ImageQuality_StdIntensity_OrigER
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
     Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigER
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
-    Type of measurement to plot on the X-axis:Index
+    Type of measurement to plot on the X-axis:Image
     Enter the object name:None
-    Select the X-axis measurement:None
+    Select the X-axis measurement:ImageQuality_StdIntensity_OrigRNA
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
     Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigRNA
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
-    Type of measurement to plot on the X-axis:Index
+    Type of measurement to plot on the X-axis:Image
     Enter the object name:None
-    Select the X-axis measurement:None
+    Select the X-axis measurement:ImageQuality_StdIntensity_OrigAGP
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
     Select the Y-axis measurement:ImageQuality_PercentMaximal_OrigAGP
     Select the Y-axis index:ImageNumber
     Select the measurement display tool:ScatterPlot
-    Type of measurement to plot on the X-axis:Index
+    Type of measurement to plot on the X-axis:Image
     Enter the object name:None
-    Select the X-axis measurement:None
+    Select the X-axis measurement:ImageQuality_StdIntensity_OrigMito
     Select the X-axis index:ImageNumber
     Type of measurement to plot on the Y-axis:Image
     Enter the object name:None
