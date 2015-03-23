@@ -515,12 +515,12 @@ SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Select the module display window to save:None
     Select method for constructing file names:Single name
     Select image name for file prefix:OrigDNA
-    Enter single file name:\\\\g<Well>_s\\\\g<Site>_NucleiOutlines
+    Enter single file name:\\\\g<Well>_s\\\\g<Site>_nuclei
     Number of digits:4
     Append a suffix to the image file name?:Yes
     Text to append to the image name:_nuclei
     Saved file format:png
-    Output file location:Default Output Folder sub-folder\x7COutlines/\\\\g<Plate>
+    Output file location:Default Output Folder sub-folder\x7Coutlines/\\\\g<Plate>
     Image bit depth:8
     Overwrite existing files without warning?:Yes
     When to save:Every cycle
@@ -539,12 +539,12 @@ SaveImages:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Select the module display window to save:None
     Select method for constructing file names:Single name
     Select image name for file prefix:OrigDNA
-    Enter single file name:\\\\g<Well>_s\\\\g<Site>_CellOutlines
+    Enter single file name:\\\\g<Well>_s\\\\g<Site>_cells
     Number of digits:4
     Append a suffix to the image file name?:Yes
     Text to append to the image name:_nuclei
     Saved file format:png
-    Output file location:Default Output Folder sub-folder\x7COutlines/\\\\g<Plate>
+    Output file location:Default Output Folder sub-folder\x7Coutlines/\\\\g<Plate>
     Image bit depth:8
     Overwrite existing files without warning?:Yes
     When to save:Every cycle
