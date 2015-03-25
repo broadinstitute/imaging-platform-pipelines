@@ -577,7 +577,7 @@ ExportToDatabase:[module_num:25|svn_version:\'Unknown\'|variable_revision_number
     Export measurements for all objects to the database?:All
     Select the objects:
     Maximum # of characters in a column name:64
-    Create one table per object, a single object table or a single object view?:One table per object type
+    Create one table per object, a single object table or a single object view?:Single object view
     Enter an image url prepend if you plan to access your files via http:http\x3A//imageweb/images/CPALinks
     Write image thumbnails directly to the database?:Yes
     Select the images for which you want to save thumbnails:CellOutlines,NucleiOutlines,OrigER,OrigRNA,OrigDNA,OrigMito,OrigAGP
