@@ -1,7 +1,7 @@
 CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
-DateRevision:20151006154113
-GitHash:9175c1e
+DateRevision:20160503183100
+GitHash:ac0529e
 ModuleCount:24
 HasImagePlaneDetails:False
 
@@ -99,7 +99,7 @@ FlagImage:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Hidden:1
     Name the flag\'s category:Metadata
     Name the flag:QCFlag_isSaturated
-    Flag if any, or all, measurement(s) fails to meet the criteria?:Flag if any fail
+    How should measurements be linked?:Flag if any fail
     Skip image set if flagged?:No
     Flag is based on:Rules
     Select the object to be used for flagging:None
@@ -114,7 +114,7 @@ FlagImage:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Hidden:1
     Name the flag\'s category:Metadata
     Name the flag:QCFlag_isBlurry
-    Flag if any, or all, measurement(s) fails to meet the criteria?:Flag if any fail
+    How should measurements be linked?:Flag if any fail
     Skip image set if flagged?:No
     Flag is based on:Rules
     Select the object to be used for flagging:None
@@ -221,7 +221,7 @@ IdentifyTertiaryObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_
     Retain outlines of the tertiary objects?:No
     Shrink smaller object prior to subtraction?:Yes
 
-MeasureCorrelation:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureCorrelation:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Hidden:5
     Hidden:3
     Select an image to measure:DNA
@@ -229,12 +229,13 @@ MeasureCorrelation:[module_num:9|svn_version:\'Unknown\'|variable_revision_numbe
     Select an image to measure:ER
     Select an image to measure:RNA
     Select an image to measure:AGP
+    Set threshold as percentage of maximum intensity for the images:15.0
     Select where to measure correlation:Within objects
     Select an object to measure:Nuclei
     Select an object to measure:Cells
     Select an object to measure:Cytoplasm
 
-MeasureGranularity:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureGranularity:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Image count:5
     Object count:1
     Select an image to measure:DNA
@@ -280,7 +281,7 @@ MeasureGranularity:[module_num:10|svn_version:\'Unknown\'|variable_revision_numb
     Select objects to measure:Cytoplasm
     Select objects to measure:Nuclei
 
-MeasureObjectIntensity:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureObjectIntensity:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Hidden:5
     Select an image to measure:DNA
     Select an image to measure:ER
@@ -291,7 +292,7 @@ MeasureObjectIntensity:[module_num:11|svn_version:\'Unknown\'|variable_revision_
     Select objects to measure:Cytoplasm
     Select objects to measure:Cells
 
-MeasureObjectNeighbors:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureObjectNeighbors:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Select objects to measure:Cells
     Select neighboring objects to measure:Cells
     Method to determine neighbors:Within a specified distance
@@ -303,7 +304,7 @@ MeasureObjectNeighbors:[module_num:12|svn_version:\'Unknown\'|variable_revision_
     Name the output image:PercentTouching
     Select a colormap:Default
 
-MeasureObjectNeighbors:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureObjectNeighbors:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Select objects to measure:Nuclei
     Select neighboring objects to measure:Nuclei
     Method to determine neighbors:Within a specified distance
@@ -315,7 +316,7 @@ MeasureObjectNeighbors:[module_num:13|svn_version:\'Unknown\'|variable_revision_
     Name the output image:PercentTouching
     Select a colormap:Default
 
-MeasureObjectNeighbors:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureObjectNeighbors:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Select objects to measure:Cells
     Select neighboring objects to measure:Cells
     Method to determine neighbors:Adjacent
@@ -327,11 +328,13 @@ MeasureObjectNeighbors:[module_num:14|svn_version:\'Unknown\'|variable_revision_
     Name the output image:PercentTouching
     Select a colormap:Default
 
-MeasureObjectRadialDistribution:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureObjectIntensityDistribution:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:5|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Hidden:4
     Hidden:3
     Hidden:1
     Hidden:0
+    Calculate intensity Zernikes?:None
+    Maximum zernike moment:9
     Select an image to measure:ER
     Select an image to measure:RNA
     Select an image to measure:AGP
@@ -349,13 +352,13 @@ MeasureObjectRadialDistribution:[module_num:15|svn_version:\'Unknown\'|variable_
     Number of bins:4
     Maximum radius:100
 
-MeasureObjectSizeShape:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:1|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureObjectSizeShape:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:1|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Select objects to measure:Cells
     Select objects to measure:Nuclei
     Select objects to measure:Cytoplasm
     Calculate the Zernike features?:Yes
 
-MeasureTexture:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:False|wants_pause:False]
+MeasureTexture:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
     Hidden:5
     Hidden:3
     Hidden:3
@@ -449,7 +452,7 @@ SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-ExportToDatabase:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:26|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+ExportToDatabase:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:27|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
     Database type:MySQL / CSV
     Database name:
     Add a prefix to table names?:Yes
@@ -489,6 +492,7 @@ ExportToDatabase:[module_num:22|svn_version:\'Unknown\'|variable_revision_number
     Export object relationships?:No
     Overwrite without warning?:Data only
     Access CPA images via URL?:Yes
+    Select the classification type:Object
     Select an image to include:OrigDNA
     Use the image name for the display?:No
     Image name:DNA
@@ -550,7 +554,7 @@ ExportToSpreadsheet:[module_num:23|svn_version:\'Unknown\'|variable_revision_num
     :
     Representation of Nan/Inf:NaN
     Add a prefix to file names?:No
-    Filename prefix\x3A:
+    Filename prefix:
     Overwrite existing files without warning?:Yes
     Data to export:Do not use
     Combine these object measurements with those of the previous object?:No
