@@ -2,95 +2,21 @@ CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
 DateRevision:20160418141927
 GitHash:9969f42
-ModuleCount:25
+ModuleCount:22
 HasImagePlaneDetails:False
 
-Images:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    :
-    Filter images?:Images only
-    Select the rule criteria:and (extension does isimage)
+LoadData:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:6|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Input data file location:Elsewhere...\x7C/Users/shsingh/tmp/workspace/load_data_csv/2016_04_01_a549_48hr_batch1/SQ00015116
+    Name of the file:load_data_with_illum.csv
+    Load images based on this data?:Yes
+    Base image location:Default Input Folder\x7C
+    Process just a range of rows?:No
+    Rows to process:1,100000
+    Group images by metadata?:Yes
+    Select metadata tags for grouping:Plate
+    Rescale intensities?:Yes
 
-Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\'The Metadata module optionally allows you to extract information describing your images (i.e, metadata) which will be stored along with your measurements. This information can be contained in the file name and/or location, or in an external file.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Extract metadata?:Yes
-    Metadata data type:Text
-    Metadata types:{}
-    Extraction method count:2
-    Metadata extraction method:Extract from file/folder names
-    Metadata source:File name
-    Regular expression:r(?P<WellRow>\x5B0-9\x5D{2})c(?P<WellCol>\x5B0-9\x5D{2})f(?P<Site>\x5B0-9\x5D{2}).*ch(?P<ChannelNumber>\x5B0-9\x5D)
-    Regular expression:(?P<Date>\x5B0-9\x5D{4}_\x5B0-9\x5D{2}_\x5B0-9\x5D{2})$
-    Extract metadata from:All images
-    Select the filtering criteria:and (file does contain "")
-    Metadata file location:
-    Match file and image metadata:\x5B\x5D
-    Use case insensitive matching?:No
-    Metadata extraction method:Extract from file/folder names
-    Metadata source:Folder name
-    Regular expression:^(?P<Plate>.*)_(?P<Well>\x5BA-P\x5D\x5B0-9\x5D{2})_s(?P<Site>\x5B0-9\x5D)_w(?P<ChannelNumber>\x5B0-9\x5D)
-    Regular expression:\x5B\\\\\\\\/\x5D(?P<Plate>\\\\w*)__\\\\d{4}-\\\\d{2}-\\\\d{2}.*\x5B\\\\\\\\/\x5D
-    Extract metadata from:All images
-    Select the filtering criteria:and (file does contain "")
-    Metadata file location:
-    Match file and image metadata:\x5B\x5D
-    Use case insensitive matching?:No
-
-NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\'The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Assign a name to:Images matching rules
-    Select the image type:Grayscale image
-    Name to assign these images:DNA
-    Match metadata:\x5B{u\'OrigER\'\x3A u\'Plate\', u\'OrigAGP\'\x3A u\'Plate\', u\'OrigRNA\'\x3A u\'Plate\', u\'OrigDNA\'\x3A u\'Plate\', u\'OrigMito\'\x3A u\'Plate\'}, {u\'OrigER\'\x3A u\'Well\', u\'OrigAGP\'\x3A u\'Well\', u\'OrigRNA\'\x3A u\'Well\', u\'OrigDNA\'\x3A u\'Well\', u\'OrigMito\'\x3A u\'Well\'}, {u\'OrigER\'\x3A u\'Site\', u\'OrigAGP\'\x3A u\'Site\', u\'OrigRNA\'\x3A u\'Site\', u\'OrigDNA\'\x3A u\'Site\', u\'OrigMito\'\x3A u\'Site\'}\x5D
-    Image set matching method:Metadata
-    Set intensity range from:Image metadata
-    Assignments count:5
-    Single images count:0
-    Maximum intensity:255.0
-    Select the rule criteria:and (metadata does ChannelNumber "1")
-    Name to assign these images:OrigDNA
-    Name to assign these objects:Cell
-    Select the image type:Grayscale image
-    Set intensity range from:Image metadata
-    Retain outlines of loaded objects?:No
-    Name the outline image:LoadedObjects
-    Maximum intensity:255.0
-    Select the rule criteria:and (metadata does ChannelNumber "2")
-    Name to assign these images:OrigER
-    Name to assign these objects:Nucleus
-    Select the image type:Grayscale image
-    Set intensity range from:Image metadata
-    Retain outlines of loaded objects?:No
-    Name the outline image:LoadedObjects
-    Maximum intensity:255.0
-    Select the rule criteria:and (metadata does ChannelNumber "3")
-    Name to assign these images:OrigRNA
-    Name to assign these objects:Cytoplasm
-    Select the image type:Grayscale image
-    Set intensity range from:Image metadata
-    Retain outlines of loaded objects?:No
-    Name the outline image:LoadedObjects
-    Maximum intensity:255.0
-    Select the rule criteria:and (metadata does ChannelNumber "4")
-    Name to assign these images:OrigAGP
-    Name to assign these objects:Speckle
-    Select the image type:Grayscale image
-    Set intensity range from:Image metadata
-    Retain outlines of loaded objects?:No
-    Name the outline image:LoadedObjects
-    Maximum intensity:255.0
-    Select the rule criteria:and (metadata does ChannelNumber "5")
-    Name to assign these images:OrigMito
-    Name to assign these objects:Object1
-    Select the image type:Grayscale image
-    Set intensity range from:Image metadata
-    Retain outlines of loaded objects?:No
-    Name the outline image:LoadedObjects
-    Maximum intensity:255.0
-
-Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Do you want to group your images?:Yes
-    grouping metadata count:1
-    Metadata category:Plate
-
-Resize:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigDNA
     Name the output image:DownsampledDNA
     Resizing method:Resize by a fraction or multiple of the original size
@@ -102,7 +28,7 @@ Resize:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_win
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledDNA
     Name the output image:IllumDNA
     Select how the illumination function is calculated:Regular
@@ -127,7 +53,7 @@ CorrectIlluminationCalculate:[module_num:6|svn_version:\'Unknown\'|variable_revi
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:IllumDNA
     Name the output image:UpsampledIllumDNA
     Resizing method:Resize by a fraction or multiple of the original size
@@ -139,7 +65,7 @@ Resize:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_win
     Select the image with the desired dimensions:None
     Additional image count:0
 
-Resize:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigER
     Name the output image:DownsampledER
     Resizing method:Resize by a fraction or multiple of the original size
@@ -151,7 +77,7 @@ Resize:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:4|show_win
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledER
     Name the output image:IllumER
     Select how the illumination function is calculated:Regular
@@ -176,7 +102,7 @@ CorrectIlluminationCalculate:[module_num:9|svn_version:\'Unknown\'|variable_revi
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:IllumER
     Name the output image:UpsampledIllumER
     Resizing method:Resize by a fraction or multiple of the original size
@@ -188,7 +114,7 @@ Resize:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:4|show_wi
     Select the image with the desired dimensions:None
     Additional image count:0
 
-Resize:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigRNA
     Name the output image:DownsampledRNA
     Resizing method:Resize by a fraction or multiple of the original size
@@ -200,7 +126,7 @@ Resize:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:4|show_wi
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledRNA
     Name the output image:IllumRNA
     Select how the illumination function is calculated:Regular
@@ -225,7 +151,7 @@ CorrectIlluminationCalculate:[module_num:12|svn_version:\'Unknown\'|variable_rev
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:IllumRNA
     Name the output image:UpsampledIllumRNA
     Resizing method:Resize by a fraction or multiple of the original size
@@ -237,7 +163,7 @@ Resize:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:4|show_wi
     Select the image with the desired dimensions:None
     Additional image count:0
 
-Resize:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigAGP
     Name the output image:DownsampledAGP
     Resizing method:Resize by a fraction or multiple of the original size
@@ -249,7 +175,7 @@ Resize:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:4|show_wi
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledAGP
     Name the output image:IllumAGP
     Select how the illumination function is calculated:Regular
@@ -274,7 +200,7 @@ CorrectIlluminationCalculate:[module_num:15|svn_version:\'Unknown\'|variable_rev
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:IllumAGP
     Name the output image:UpsampledIllumAGP
     Resizing method:Resize by a fraction or multiple of the original size
@@ -286,7 +212,7 @@ Resize:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:4|show_wi
     Select the image with the desired dimensions:None
     Additional image count:0
 
-Resize:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigMito
     Name the output image:DownsampledMito
     Resizing method:Resize by a fraction or multiple of the original size
@@ -298,7 +224,7 @@ Resize:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:4|show_wi
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledMito
     Name the output image:IllumMito
     Select how the illumination function is calculated:Regular
@@ -323,7 +249,7 @@ CorrectIlluminationCalculate:[module_num:18|svn_version:\'Unknown\'|variable_rev
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:IllumMito
     Name the output image:UpsampledIllumMito
     Resizing method:Resize by a fraction or multiple of the original size
@@ -335,7 +261,7 @@ Resize:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:4|show_wi
     Select the image with the desired dimensions:None
     Additional image count:0
 
-SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:UpsampledIllumDNA
     Select the objects to save:None
@@ -359,7 +285,7 @@ SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:UpsampledIllumER
     Select the objects to save:None
@@ -383,7 +309,7 @@ SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-SaveImages:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:UpsampledIllumRNA
     Select the objects to save:None
@@ -407,7 +333,7 @@ SaveImages:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:UpsampledIllumAGP
     Select the objects to save:None
@@ -431,7 +357,7 @@ SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-SaveImages:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:UpsampledIllumMito
     Select the objects to save:None
@@ -455,7 +381,7 @@ SaveImages:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-CreateBatchFiles:[module_num:25|svn_version:\'Unknown\'|variable_revision_number:7|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CreateBatchFiles:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:7|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Store batch files in default output folder?:Yes
     Output folder path:/imaging/analysis/2008_01_24_Hepatotoxicity_GolubLab_DavidThomas/2012_01_23_Expanded60CmpdSet/Output
     Are the cluster computers running Windows?:No
@@ -465,7 +391,3 @@ CreateBatchFiles:[module_num:25|svn_version:\'Unknown\'|variable_revision_number
     Hidden\x3A revision number:0
     Hidden\x3A from old matlab:No
     Launch BatchProfiler:No
-    Local root path:\\\\\\\\argon\\\\imaging_analysis
-    Cluster root path:/imaging/analysis
-    Local root path:\\\\\\\\argon\\\\cmap_imaging
-    Cluster root path:/cmap/imaging
