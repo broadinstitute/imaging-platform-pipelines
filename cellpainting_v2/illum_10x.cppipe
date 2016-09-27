@@ -1,7 +1,7 @@
 CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
-DateRevision:20140723174500
-GitHash:6c2d896
+DateRevision:20160418141927
+GitHash:9969f42
 ModuleCount:25
 HasImagePlaneDetails:False
 
@@ -34,7 +34,7 @@ Metadata:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_w
     Match file and image metadata:\x5B\x5D
     Use case insensitive matching?:No
 
-NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|show_window:False|notes:\x5B\'The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\'The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Assign a name to:Images matching rules
     Select the image type:Grayscale image
     Name to assign these images:DNA
@@ -43,6 +43,7 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Set intensity range from:Image metadata
     Assignments count:5
     Single images count:0
+    Maximum intensity:255.0
     Select the rule criteria:and (metadata does ChannelNumber "1")
     Name to assign these images:OrigDNA
     Name to assign these objects:Cell
@@ -50,6 +51,7 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
+    Maximum intensity:255.0
     Select the rule criteria:and (metadata does ChannelNumber "2")
     Name to assign these images:OrigER
     Name to assign these objects:Nucleus
@@ -57,6 +59,7 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
+    Maximum intensity:255.0
     Select the rule criteria:and (metadata does ChannelNumber "3")
     Name to assign these images:OrigRNA
     Name to assign these objects:Cytoplasm
@@ -64,6 +67,7 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
+    Maximum intensity:255.0
     Select the rule criteria:and (metadata does ChannelNumber "4")
     Name to assign these images:OrigAGP
     Name to assign these objects:Speckle
@@ -71,6 +75,7 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
+    Maximum intensity:255.0
     Select the rule criteria:and (metadata does ChannelNumber "5")
     Name to assign these images:OrigMito
     Name to assign these objects:Object1
@@ -78,6 +83,7 @@ NamesAndTypes:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|s
     Set intensity range from:Image metadata
     Retain outlines of loaded objects?:No
     Name the outline image:LoadedObjects
+    Maximum intensity:255.0
 
 Groups:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\'The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.\'\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Do you want to group your images?:Yes
@@ -342,7 +348,7 @@ SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Text to append to the image name:
     Saved file format:mat
     Output file location:Default Output Folder\x7CIllumCorrFxns
-    Image bit depth:8
+    Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Last cycle
     Rescale the images? :No
@@ -366,7 +372,7 @@ SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Text to append to the image name:
     Saved file format:mat
     Output file location:Default Output Folder\x7CIllumCorrFxns
-    Image bit depth:8
+    Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Last cycle
     Rescale the images? :No
@@ -390,7 +396,7 @@ SaveImages:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Text to append to the image name:
     Saved file format:mat
     Output file location:Default Output Folder\x7CIllumCorrFxns
-    Image bit depth:8
+    Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Last cycle
     Rescale the images? :No
@@ -414,7 +420,7 @@ SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Text to append to the image name:
     Saved file format:mat
     Output file location:Default Output Folder\x7CIllumCorrFxns
-    Image bit depth:8
+    Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Last cycle
     Rescale the images? :No
@@ -438,7 +444,7 @@ SaveImages:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Text to append to the image name:
     Saved file format:mat
     Output file location:Default Output Folder\x7CIllumCorrFxns
-    Image bit depth:8
+    Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Last cycle
     Rescale the images? :No
@@ -449,7 +455,7 @@ SaveImages:[module_num:24|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-CreateBatchFiles:[module_num:25|svn_version:\'Unknown\'|variable_revision_number:6|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CreateBatchFiles:[module_num:25|svn_version:\'Unknown\'|variable_revision_number:7|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Store batch files in default output folder?:Yes
     Output folder path:/imaging/analysis/2008_01_24_Hepatotoxicity_GolubLab_DavidThomas/2012_01_23_Expanded60CmpdSet/Output
     Are the cluster computers running Windows?:No
@@ -458,6 +464,7 @@ CreateBatchFiles:[module_num:25|svn_version:\'Unknown\'|variable_revision_number
     Hidden\x3A default input folder at time of save:/imaging/analysis/2008_01_24_Hepatotoxicity_GolubLab_DavidThomas/2012_01_23_Expanded60CmpdSet
     Hidden\x3A revision number:0
     Hidden\x3A from old matlab:No
+    Launch BatchProfiler:No
     Local root path:\\\\\\\\argon\\\\imaging_analysis
     Cluster root path:/imaging/analysis
     Local root path:\\\\\\\\argon\\\\cmap_imaging
