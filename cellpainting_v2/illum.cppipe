@@ -23,7 +23,7 @@ Resize:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_win
     Resizing factor:0.1
     Width of the final image:100
     Height of the final image:100
-    Interpolation method:Nearest Neighbor
+    Interpolation method:Bilinear
     Method to specify the dimensions:Manual
     Select the image with the desired dimensions:None
     Additional image count:0
@@ -54,30 +54,18 @@ CorrectIlluminationCalculate:[module_num:3|svn_version:\'Unknown\'|variable_revi
     Residual value for convergence:0.001
 
 Resize:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Select the input image:IllumDNA
-    Name the output image:UpsampledIllumDNA
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Nearest Neighbor
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-Resize:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigER
     Name the output image:DownsampledER
     Resizing method:Resize by a fraction or multiple of the original size
     Resizing factor:0.1
     Width of the final image:100
     Height of the final image:100
-    Interpolation method:Nearest Neighbor
+    Interpolation method:Bilinear
     Method to specify the dimensions:Manual
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledER
     Name the output image:IllumER
     Select how the illumination function is calculated:Regular
@@ -102,31 +90,19 @@ CorrectIlluminationCalculate:[module_num:6|svn_version:\'Unknown\'|variable_revi
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Select the input image:IllumER
-    Name the output image:UpsampledIllumER
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Nearest Neighbor
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-Resize:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigRNA
     Name the output image:DownsampledRNA
     Resizing method:Resize by a fraction or multiple of the original size
     Resizing factor:0.1
     Width of the final image:100
     Height of the final image:100
-    Interpolation method:Nearest Neighbor
+    Interpolation method:Bilinear
     Method to specify the dimensions:Manual
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledRNA
     Name the output image:IllumRNA
     Select how the illumination function is calculated:Regular
@@ -151,31 +127,19 @@ CorrectIlluminationCalculate:[module_num:9|svn_version:\'Unknown\'|variable_revi
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Select the input image:IllumRNA
-    Name the output image:UpsampledIllumRNA
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Nearest Neighbor
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-Resize:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigAGP
     Name the output image:DownsampledAGP
     Resizing method:Resize by a fraction or multiple of the original size
     Resizing factor:0.1
     Width of the final image:100
     Height of the final image:100
-    Interpolation method:Nearest Neighbor
+    Interpolation method:Bilinear
     Method to specify the dimensions:Manual
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledAGP
     Name the output image:IllumAGP
     Select how the illumination function is calculated:Regular
@@ -200,31 +164,19 @@ CorrectIlluminationCalculate:[module_num:12|svn_version:\'Unknown\'|variable_rev
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Select the input image:IllumAGP
-    Name the output image:UpsampledIllumAGP
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Nearest Neighbor
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-Resize:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:OrigMito
     Name the output image:DownsampledMito
     Resizing method:Resize by a fraction or multiple of the original size
     Resizing factor:0.1
     Width of the final image:100
     Height of the final image:100
-    Interpolation method:Nearest Neighbor
+    Interpolation method:Bilinear
     Method to specify the dimensions:Manual
     Select the image with the desired dimensions:None
     Additional image count:0
 
-CorrectIlluminationCalculate:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CorrectIlluminationCalculate:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DownsampledMito
     Name the output image:IllumMito
     Select how the illumination function is calculated:Regular
@@ -249,14 +201,62 @@ CorrectIlluminationCalculate:[module_num:15|svn_version:\'Unknown\'|variable_rev
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+Resize:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:IllumMito
     Name the output image:UpsampledIllumMito
     Resizing method:Resize by a fraction or multiple of the original size
     Resizing factor:10
     Width of the final image:100
     Height of the final image:100
-    Interpolation method:Nearest Neighbor
+    Interpolation method:Bilinear
+    Method to specify the dimensions:Manual
+    Select the image with the desired dimensions:None
+    Additional image count:0
+
+Resize:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:IllumDNA
+    Name the output image:UpsampledIllumDNA
+    Resizing method:Resize by a fraction or multiple of the original size
+    Resizing factor:10
+    Width of the final image:100
+    Height of the final image:100
+    Interpolation method:Bilinear
+    Method to specify the dimensions:Manual
+    Select the image with the desired dimensions:None
+    Additional image count:0
+
+Resize:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:IllumER
+    Name the output image:UpsampledIllumER
+    Resizing method:Resize by a fraction or multiple of the original size
+    Resizing factor:10
+    Width of the final image:100
+    Height of the final image:100
+    Interpolation method:Bilinear
+    Method to specify the dimensions:Manual
+    Select the image with the desired dimensions:None
+    Additional image count:0
+
+Resize:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:IllumRNA
+    Name the output image:UpsampledIllumRNA
+    Resizing method:Resize by a fraction or multiple of the original size
+    Resizing factor:10
+    Width of the final image:100
+    Height of the final image:100
+    Interpolation method:Bilinear
+    Method to specify the dimensions:Manual
+    Select the image with the desired dimensions:None
+    Additional image count:0
+
+Resize:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:IllumAGP
+    Name the output image:UpsampledIllumAGP
+    Resizing method:Resize by a fraction or multiple of the original size
+    Resizing factor:10
+    Width of the final image:100
+    Height of the final image:100
+    Interpolation method:Bilinear
     Method to specify the dimensions:Manual
     Select the image with the desired dimensions:None
     Additional image count:0
