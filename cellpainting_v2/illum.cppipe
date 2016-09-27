@@ -37,7 +37,7 @@ CorrectIlluminationCalculate:[module_num:3|svn_version:\'Unknown\'|variable_revi
     Block size:60
     Rescale the illumination function?:Yes
     Calculate function for each image individually, or based on all images?:All\x3A Across cycles
-    Smoothing method:Gaussian Filter
+    Smoothing method:Median Filter
     Method to calculate smoothing filter size:Manually
     Approximate object size:10
     Smoothing filter size:20
@@ -74,7 +74,7 @@ CorrectIlluminationCalculate:[module_num:5|svn_version:\'Unknown\'|variable_revi
     Block size:60
     Rescale the illumination function?:Yes
     Calculate function for each image individually, or based on all images?:All\x3A Across cycles
-    Smoothing method:Gaussian Filter
+    Smoothing method:Median Filter
     Method to calculate smoothing filter size:Manually
     Approximate object size:10
     Smoothing filter size:20
@@ -111,7 +111,7 @@ CorrectIlluminationCalculate:[module_num:7|svn_version:\'Unknown\'|variable_revi
     Block size:60
     Rescale the illumination function?:Yes
     Calculate function for each image individually, or based on all images?:All\x3A Across cycles
-    Smoothing method:Gaussian Filter
+    Smoothing method:Median Filter
     Method to calculate smoothing filter size:Manually
     Approximate object size:10
     Smoothing filter size:20
@@ -148,7 +148,7 @@ CorrectIlluminationCalculate:[module_num:9|svn_version:\'Unknown\'|variable_revi
     Block size:60
     Rescale the illumination function?:Yes
     Calculate function for each image individually, or based on all images?:All\x3A Across cycles
-    Smoothing method:Gaussian Filter
+    Smoothing method:Median Filter
     Method to calculate smoothing filter size:Manually
     Approximate object size:10
     Smoothing filter size:20
@@ -185,7 +185,7 @@ CorrectIlluminationCalculate:[module_num:11|svn_version:\'Unknown\'|variable_rev
     Block size:60
     Rescale the illumination function?:Yes
     Calculate function for each image individually, or based on all images?:All\x3A Across cycles
-    Smoothing method:Gaussian Filter
+    Smoothing method:Median Filter
     Method to calculate smoothing filter size:Manually
     Approximate object size:10
     Smoothing filter size:20
@@ -263,7 +263,7 @@ Resize:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:4|show_wi
 
 SaveImages:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
-    Select the image to save:UpsampledIllumDNA
+    Select the image to save:IllumDNA
     Select the objects to save:None
     Select the module display window to save:None
     Select method for constructing file names:Single name
@@ -287,7 +287,7 @@ SaveImages:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:11|sh
 
 SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
-    Select the image to save:UpsampledIllumER
+    Select the image to save:IllumER
     Select the objects to save:None
     Select the module display window to save:None
     Select method for constructing file names:Single name
@@ -311,7 +311,7 @@ SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:11|sh
 
 SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
-    Select the image to save:UpsampledIllumRNA
+    Select the image to save:IllumRNA
     Select the objects to save:None
     Select the module display window to save:None
     Select method for constructing file names:Single name
@@ -335,7 +335,7 @@ SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:11|sh
 
 SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
-    Select the image to save:UpsampledIllumAGP
+    Select the image to save:IllumAGP
     Select the objects to save:None
     Select the module display window to save:None
     Select method for constructing file names:Single name
@@ -359,7 +359,7 @@ SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|sh
 
 SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
-    Select the image to save:UpsampledIllumMito
+    Select the image to save:IllumMito
     Select the objects to save:None
     Select the module display window to save:None
     Select method for constructing file names:Single name
