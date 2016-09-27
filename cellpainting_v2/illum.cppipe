@@ -2,7 +2,7 @@ CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
 DateRevision:20160418141927
 GitHash:9969f42
-ModuleCount:22
+ModuleCount:17
 HasImagePlaneDetails:False
 
 LoadData:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:6|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
@@ -201,67 +201,7 @@ CorrectIlluminationCalculate:[module_num:11|svn_version:\'Unknown\'|variable_rev
     Maximum number of iterations:40
     Residual value for convergence:0.001
 
-Resize:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
-    Select the input image:IllumMito
-    Name the output image:UpsampledIllumMito
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Bilinear
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-Resize:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
-    Select the input image:IllumDNA
-    Name the output image:UpsampledIllumDNA
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Bilinear
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-Resize:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
-    Select the input image:IllumER
-    Name the output image:UpsampledIllumER
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Bilinear
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-Resize:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
-    Select the input image:IllumRNA
-    Name the output image:UpsampledIllumRNA
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Bilinear
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-Resize:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
-    Select the input image:IllumAGP
-    Name the output image:UpsampledIllumAGP
-    Resizing method:Resize by a fraction or multiple of the original size
-    Resizing factor:10
-    Width of the final image:100
-    Height of the final image:100
-    Interpolation method:Bilinear
-    Method to specify the dimensions:Manual
-    Select the image with the desired dimensions:None
-    Additional image count:0
-
-SaveImages:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:IllumDNA
     Select the objects to save:None
@@ -285,7 +225,7 @@ SaveImages:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:IllumER
     Select the objects to save:None
@@ -309,7 +249,7 @@ SaveImages:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:IllumRNA
     Select the objects to save:None
@@ -333,7 +273,7 @@ SaveImages:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:IllumAGP
     Select the objects to save:None
@@ -357,7 +297,7 @@ SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:IllumMito
     Select the objects to save:None
@@ -381,7 +321,7 @@ SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Base image folder:Default Input Folder
     Saved movie format:avi
 
-CreateBatchFiles:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:7|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+CreateBatchFiles:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:7|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Store batch files in default output folder?:Yes
     Output folder path:/imaging/analysis/2008_01_24_Hepatotoxicity_GolubLab_DavidThomas/2012_01_23_Expanded60CmpdSet/Output
     Are the cluster computers running Windows?:No
