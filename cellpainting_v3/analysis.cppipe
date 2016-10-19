@@ -13,7 +13,7 @@ LoadData:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:6|show_w
     Process just a range of rows?:No
     Rows to process:1,2
     Group images by metadata?:Yes
-    Select metadata tags for grouping:Plate,Well,Site
+    Select metadata tags for grouping:Well,Site
     Rescale intensities?:Yes
 
 CorrectIlluminationApply:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', \n      dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
