@@ -417,7 +417,7 @@ SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Append a suffix to the image file name?:Yes
     Text to append to the image name:_nuclei
     Saved file format:png
-    Output file location:Default Output Folder sub-folder\x7Coutlines/\\\\g<Plate>
+    Output file location:Default Output Folder sub-folder\x7C\\\\g<Well>-\\\\g<Site>/outlines
     Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Every cycle
@@ -441,7 +441,7 @@ SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Append a suffix to the image file name?:Yes
     Text to append to the image name:_nuclei
     Saved file format:png
-    Output file location:Default Output Folder sub-folder\x7Coutlines/\\\\g<Plate>
+    Output file location:Default Output Folder sub-folder\x7C\\\\g<Well>-\\\\g<Site>/outlines
     Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Every cycle
