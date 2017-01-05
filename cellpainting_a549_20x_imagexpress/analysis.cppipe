@@ -1,7 +1,7 @@
 CellProfiler Pipeline: http://www.cellprofiler.org
 Version:3
-DateRevision:20160503183100
-GitHash:ac0529e
+DateRevision:20160418141927
+GitHash:9969f42
 ModuleCount:24
 HasImagePlaneDetails:False
 
@@ -417,7 +417,7 @@ SaveImages:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Append a suffix to the image file name?:Yes
     Text to append to the image name:_nuclei
     Saved file format:png
-    Output file location:Default Output Folder sub-folder\x7Coutlines/\\\\g<Plate>
+    Output file location:Default Output Folder sub-folder\x7C\\\\g<Well>-\\\\g<Site>/outlines
     Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Every cycle
@@ -441,7 +441,7 @@ SaveImages:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Append a suffix to the image file name?:Yes
     Text to append to the image name:_nuclei
     Saved file format:png
-    Output file location:Default Output Folder sub-folder\x7Coutlines/\\\\g<Plate>
+    Output file location:Default Output Folder sub-folder\x7C\\\\g<Well>-\\\\g<Site>/outlines
     Image bit depth:8-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Every cycle
@@ -546,7 +546,7 @@ ExportToSpreadsheet:[module_num:23|svn_version:\'Unknown\'|variable_revision_num
     Calculate the per-image mean values for object measurements?:No
     Calculate the per-image median values for object measurements?:No
     Calculate the per-image standard deviation values for object measurements?:No
-    Output file location:Default Output Folder\x7C
+    Output file location:Default Output Folder sub-folder\x7C\\\\g<Well>-\\\\g<Site>
     Create a GenePattern GCT file?:No
     Select source of sample row name:Metadata
     Select the image to use as the identifier:None
