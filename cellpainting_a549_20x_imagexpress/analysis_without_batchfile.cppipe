@@ -155,7 +155,7 @@ IdentifyPrimaryObjects:[module_num:6|svn_version:\'Unknown\'|variable_revision_n
     Thresholding method:Otsu
     Select the smoothing method for thresholding:Automatic
     Threshold smoothing scale:1
-    Threshold correction factor:1
+    Threshold correction factor:1.0
     Lower and upper bounds on threshold:0.01,1.0
     Approximate fraction of image covered by objects?:0.01
     Manual threshold:0.0
