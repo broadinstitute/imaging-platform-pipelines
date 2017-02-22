@@ -20,3 +20,6 @@ Differences with (cellpainting_u2os_20x_imagexpress/analysis.cppipe)[https://git
 >     Threshold correction factor:.9
 >     Lower and upper bounds on threshold:0.002,1.0
 ```
+
+- The analysis pipeline is customized for U2OS cells imaged at 20x on ImageXpress, with binning. 
+- The illumination pipeline requires that the image dimensions are a multiple of 8 because it downsamples and upsamples by a factor of 8.

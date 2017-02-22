@@ -1,0 +1,2 @@
+- The analysis pipeline is customized for A549 cells imaged at 20x on ImageXpress, with binning. 
+- The illumination pipeline requires that the image dimensions are a multiple of 10 because it downsamples and upsamples by a factor of 10.
