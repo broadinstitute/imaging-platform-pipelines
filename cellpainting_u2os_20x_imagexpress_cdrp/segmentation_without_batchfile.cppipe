@@ -172,8 +172,8 @@ IdentifyPrimaryObjects:[module_num:8|svn_version:\'Unknown\'|variable_revision_n
     Discard objects touching the border of the image?:Yes
     Method to distinguish clumped objects:Shape
     Method to draw dividing lines between clumped objects:Shape
-    Size of smoothing filter:15
-    Suppress local maxima that are closer than this minimum allowed distance:15
+    Size of smoothing filter:10
+    Suppress local maxima that are closer than this minimum allowed distance:10
     Speed up by using lower-resolution image to find local maxima?:Yes
     Name the outline image:NucleiOutlines
     Fill holes in identified objects?:Never
