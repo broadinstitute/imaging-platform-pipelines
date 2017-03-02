@@ -263,9 +263,9 @@ SaveImages:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Number of digits:4
     Append a suffix to the image file name?:Yes
     Text to append to the image name:_nuclei
-    Saved file format:png
+    Saved file format:tif
     Output file location:Default Output Folder sub-folder\x7Clabel
-    Image bit depth:8-bit integer
+    Image bit depth:16-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Every cycle
     Rescale the images? :No
@@ -287,9 +287,9 @@ SaveImages:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Number of digits:4
     Append a suffix to the image file name?:Yes
     Text to append to the image name:_nuclei
-    Saved file format:png
+    Saved file format:tif
     Output file location:Default Output Folder sub-folder\x7Clabel
-    Image bit depth:8-bit integer
+    Image bit depth:16-bit integer
     Overwrite existing files without warning?:Yes
     When to save:Every cycle
     Rescale the images? :No
