@@ -81,10 +81,10 @@ IdentifyPrimaryObjects:[module_num:5|svn_version:\'Unknown\'|variable_revision_n
     Discard objects outside the diameter range?:Yes
     Try to merge too small objects with nearby larger objects?:No
     Discard objects touching the border of the image?:Yes
-    Method to distinguish clumped objects:Shape
-    Method to draw dividing lines between clumped objects:Shape
-    Size of smoothing filter:15
-    Suppress local maxima that are closer than this minimum allowed distance:15
+    Method to distinguish clumped objects:Intensity
+    Method to draw dividing lines between clumped objects:Intensity
+    Size of smoothing filter:20
+    Suppress local maxima that are closer than this minimum allowed distance:10
     Speed up by using lower-resolution image to find local maxima?:Yes
     Name the outline image:NucleiOutlines
     Fill holes in identified objects?:Never
