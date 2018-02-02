@@ -233,10 +233,10 @@ SaveImages:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Select the module display window to save:None
     Select method for constructing file names:Single name
     Select image name for file prefix:OrigDAPI
-    Enter single file name:\\\\g<Well>_s\\\\g<Site>--cell_outlines
+    Enter single file name:\\\\g<Well>_s\\\\g<Site>--cells_outlines
     Number of digits:4
     Append a suffix to the image file name?:Yes
-    Text to append to the image name:_nuclei
+    Text to append to the image name:_cells
     Saved file format:png
     Output file location:Default Output Folder sub-folder\x7Coutlines
     Image bit depth:8-bit integer
@@ -281,10 +281,10 @@ SaveImages:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:11|sh
     Select the module display window to save:None
     Select method for constructing file names:Single name
     Select image name for file prefix:OrigDAPI
-    Enter single file name:\\\\g<Well>_s\\\\g<Site>--cell_label
+    Enter single file name:\\\\g<Well>_s\\\\g<Site>--cells_label
     Number of digits:4
     Append a suffix to the image file name?:Yes
-    Text to append to the image name:_cell
+    Text to append to the image name:_cells
     Saved file format:tif
     Output file location:Default Output Folder sub-folder\x7Clabel
     Image bit depth:16-bit integer
