@@ -1,0 +1,313 @@
+CellProfiler Pipeline: http://www.cellprofiler.org
+Version:3
+DateRevision:20160418141927
+GitHash:9969f42
+ModuleCount:21
+HasImagePlaneDetails:False
+
+LoadData:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:6|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Input data file location:Elsewhere...\x7C
+    Name of the file:
+    Load images based on this data?:Yes
+    Base image location:Default Input Folder\x7C
+    Process just a range of rows?:No
+    Rows to process:1,2
+    Group images by metadata?:Yes
+    Select metadata tags for grouping:Plate,Well,Site
+    Rescale intensities?:Yes
+
+CorrectIlluminationApply:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
+    Select the input image:OrigDAPI
+    Name the output image:DAPI
+    Select the illumination function:IllumDAPI
+    Select how the illumination function is applied:Divide
+    Select the input image:OrigTubulin
+    Name the output image:Tubulin
+    Select the illumination function:IllumTubulin
+    Select how the illumination function is applied:Divide
+    Select the input image:OrigActin
+    Name the output image:Actin
+    Select the illumination function:IllumActin
+    Select how the illumination function is applied:Divide
+
+IdentifyPrimaryObjects:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:10|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
+    Select the input image:DAPI
+    Name the primary objects to be identified:Nuclei
+    Typical diameter of objects, in pixel units (Min,Max):6,115
+    Discard objects outside the diameter range?:Yes
+    Try to merge too small objects with nearby larger objects?:No
+    Discard objects touching the border of the image?:Yes
+    Method to distinguish clumped objects:Shape
+    Method to draw dividing lines between clumped objects:Intensity
+    Size of smoothing filter:10
+    Suppress local maxima that are closer than this minimum allowed distance:5
+    Speed up by using lower-resolution image to find local maxima?:Yes
+    Name the outline image:None
+    Fill holes in identified objects?:After both thresholding and declumping
+    Automatically calculate size of smoothing filter for declumping?:No
+    Automatically calculate minimum allowed distance between local maxima?:Yes
+    Retain outlines of the identified objects?:No
+    Automatically calculate the threshold using the Otsu method?:Yes
+    Enter Laplacian of Gaussian threshold:.5
+    Automatically calculate the size of objects for the Laplacian of Gaussian filter?:Yes
+    Enter LoG filter diameter:5
+    Handling of objects if excessive number of objects identified:Continue
+    Maximum number of objects:500
+    Threshold setting version:1
+    Threshold strategy:Global
+    Thresholding method:Otsu
+    Select the smoothing method for thresholding:Automatic
+    Threshold smoothing scale:1
+    Threshold correction factor:1
+    Lower and upper bounds on threshold:0,1
+    Approximate fraction of image covered by objects?:0.01
+    Manual threshold:0.0
+    Select the measurement to threshold with:None
+    Select binary image:Otsu Global
+    Masking objects:From image
+    Two-class or three-class thresholding?:Two classes
+    Minimize the weighted variance or the entropy?:Weighted variance
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+    Method to calculate adaptive window size:Image size
+    Size of adaptive window:10
+    Use default parameters?:Default
+    Lower outlier fraction:0.05
+    Upper outlier fraction:0.05
+    Averaging method:Mean
+    Variance method:Standard deviation
+    # of deviations:2.0
+
+IdentifySecondaryObjects:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:9|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
+    Select the input objects:Nuclei
+    Name the objects to be identified:Cells
+    Select the method to identify the secondary objects:Propagation
+    Select the input image:Actin
+    Number of pixels by which to expand the primary objects:10
+    Regularization factor:0.05
+    Name the outline image:CellOutline
+    Retain outlines of the identified secondary objects?:Yes
+    Discard secondary objects touching the border of the image?:No
+    Discard the associated primary objects?:No
+    Name the new primary objects:FilteredNuclei
+    Retain outlines of the new primary objects?:No
+    Name the new primary object outlines:FilteredNucleiOutlines
+    Fill holes in identified objects?:Yes
+    Threshold setting version:1
+    Threshold strategy:Global
+    Thresholding method:Otsu
+    Select the smoothing method for thresholding:No smoothing
+    Threshold smoothing scale:1
+    Threshold correction factor:1
+    Lower and upper bounds on threshold:0,1
+    Approximate fraction of image covered by objects?:0.01
+    Manual threshold:0
+    Select the measurement to threshold with:None
+    Select binary image:Do not use
+    Masking objects:From image
+    Two-class or three-class thresholding?:Two classes
+    Minimize the weighted variance or the entropy?:Weighted variance
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+    Method to calculate adaptive window size:Image size
+    Size of adaptive window:10
+    Use default parameters?:Default
+    Lower outlier fraction:0.05
+    Upper outlier fraction:0.05
+    Averaging method:Mean
+    Variance method:Standard deviation
+    # of deviations:2.0
+
+IdentifyTertiaryObjects:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\'\', dtype=\'\x7CS1\')|enabled:True|wants_pause:True]
+    Select the larger identified objects:Cells
+    Select the smaller identified objects:Nuclei
+    Name the tertiary objects to be identified:Cytoplasm
+    Name the outline image:CytoplasmOutlines
+    Retain outlines of the tertiary objects?:No
+    Shrink smaller object prior to subtraction?:Yes
+
+MeasureObjectSizeShape:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:1|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select objects to measure:Nuclei
+    Select objects to measure:Cells
+    Select objects to measure:Cytoplasm
+    Calculate the Zernike features?:Yes
+
+MeasureObjectIntensity:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Select an image to measure:DAPI
+    Select objects to measure:Nuclei
+
+MeasureObjectIntensity:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Select an image to measure:Actin
+    Select objects to measure:Nuclei
+    Select objects to measure:Cells
+    Select objects to measure:Cytoplasm
+
+MeasureObjectIntensity:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:3|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Select an image to measure:Tubulin
+    Select objects to measure:Nuclei
+    Select objects to measure:Cells
+    Select objects to measure:Cytoplasm
+
+MeasureObjectNeighbors:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select objects to measure:Cells
+    Select neighboring objects to measure:Cells
+    Method to determine neighbors:Within a specified distance
+    Neighbor distance:3
+    Retain the image of objects colored by numbers of neighbors?:No
+    Name the output image:ObjectNeighborCount
+    Select colormap:Default
+    Retain the image of objects colored by percent of touching pixels?:No
+    Name the output image:PercentTouching
+    Select a colormap:Default
+
+MeasureObjectNeighbors:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select objects to measure:Cells
+    Select neighboring objects to measure:Cells
+    Method to determine neighbors:Within a specified distance
+    Neighbor distance:10
+    Retain the image of objects colored by numbers of neighbors?:No
+    Name the output image:ObjectNeighborCount
+    Select colormap:Default
+    Retain the image of objects colored by percent of touching pixels?:No
+    Name the output image:PercentTouching
+    Select a colormap:Default
+
+MeasureObjectNeighbors:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select objects to measure:Nuclei
+    Select neighboring objects to measure:Nuclei
+    Method to determine neighbors:Within a specified distance
+    Neighbor distance:10
+    Retain the image of objects colored by numbers of neighbors?:No
+    Name the output image:ObjectNeighborCount
+    Select colormap:Default
+    Retain the image of objects colored by percent of touching pixels?:No
+    Name the output image:PercentTouching
+    Select a colormap:Default
+
+MeasureObjectNeighbors:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:2|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select objects to measure:Nuclei
+    Select neighboring objects to measure:Nuclei
+    Method to determine neighbors:Within a specified distance
+    Neighbor distance:20
+    Retain the image of objects colored by numbers of neighbors?:No
+    Name the output image:ObjectNeighborCount
+    Select colormap:Default
+    Retain the image of objects colored by percent of touching pixels?:No
+    Name the output image:PercentTouching
+    Select a colormap:Default
+
+MeasureTexture:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Hidden:1
+    Hidden:1
+    Select an image to measure:DAPI
+    Select objects to measure:Nuclei
+    Texture scale to measure:3
+    Angles to measure:Horizontal
+    Measure Gabor features?:Yes
+    Number of angles to compute for Gabor:4
+    Measure images or objects?:Both
+
+ExportToSpreadsheet:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:11|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:No
+    Limit output to a size that is allowed in Excel?:No
+    Select the measurements to export:No
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder sub-folder\x7C
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:Yes
+    :
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix:MyExpt_
+    Overwrite existing files without warning?:Yes
+    Data to export:Do not use
+    Combine these object measurements with those of the previous object?:No
+    File name:DATA.csv
+    Use the object name for the file name?:Yes
+
+MeasureTexture:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Hidden:1
+    Hidden:1
+    Select an image to measure:DAPI
+    Select objects to measure:Nuclei
+    Texture scale to measure:10
+    Angles to measure:Horizontal
+    Measure Gabor features?:Yes
+    Number of angles to compute for Gabor:4
+    Measure images or objects?:Both
+
+MeasureTexture:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Hidden:3
+    Hidden:1
+    Select an image to measure:Actin
+    Select objects to measure:Nuclei
+    Select objects to measure:Cells
+    Select objects to measure:Cytoplasm
+    Texture scale to measure:3
+    Angles to measure:Horizontal
+    Measure Gabor features?:Yes
+    Number of angles to compute for Gabor:4
+    Measure images or objects?:Both
+
+MeasureTexture:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Hidden:3
+    Hidden:1
+    Select an image to measure:Actin
+    Select objects to measure:Nuclei
+    Select objects to measure:Cells
+    Select objects to measure:Cytoplasm
+    Texture scale to measure:10
+    Angles to measure:Horizontal
+    Measure Gabor features?:Yes
+    Number of angles to compute for Gabor:4
+    Measure images or objects?:Both
+
+MeasureTexture:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Hidden:3
+    Hidden:1
+    Select an image to measure:Tubulin
+    Select objects to measure:Nuclei
+    Select objects to measure:Cells
+    Select objects to measure:Cytoplasm
+    Texture scale to measure:3
+    Angles to measure:Horizontal
+    Measure Gabor features?:Yes
+    Number of angles to compute for Gabor:4
+    Measure images or objects?:Both
+
+MeasureTexture:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:4|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:1
+    Hidden:3
+    Hidden:1
+    Select an image to measure:Tubulin
+    Select objects to measure:Nuclei
+    Select objects to measure:Cells
+    Select objects to measure:Cytoplasm
+    Texture scale to measure:10
+    Angles to measure:Horizontal
+    Measure Gabor features?:Yes
+    Number of angles to compute for Gabor:4
+    Measure images or objects?:Both
+
+CreateBatchFiles:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:7|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+    Store batch files in default output folder?:Yes
+    Output folder path:/imaging/analysis/2008_12_04_Imaging_CDRP_for_MLPCN/HDAC_inhibitors/20100803
+    Are the cluster computers running Windows?:No
+    Hidden\x3A in batch mode:No
+    Hidden\x3A in distributed mode:No
+    Hidden\x3A default input folder at time of save:/cbnt/cbimage/HCS
+    Hidden\x3A revision number:10346
+    Hidden\x3A from old matlab:No
+    Launch BatchProfiler:No
