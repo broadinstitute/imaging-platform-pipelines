@@ -69,7 +69,7 @@ IdentifyPrimaryObjects:[module_num:3|svn_version:\'Unknown\'|variable_revision_n
     Select the measurement to threshold with:None
     Select binary image:None
     Masking objects:None
-    Two-class or three-class thresholding?:Three classes
+    Two-class or three-class thresholding?:Two classes
     Minimize the weighted variance or the entropy?:Weighted variance
     Assign pixels in the middle intensity class to the foreground or the background?:Foreground
     Method to calculate adaptive window size:Image size
