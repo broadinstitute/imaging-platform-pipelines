@@ -389,7 +389,7 @@ ExportToSpreadsheet:[module_num:21|svn_version:\'Unknown\'|variable_revision_num
     Calculate the per-image mean values for object measurements?:No
     Calculate the per-image median values for object measurements?:No
     Calculate the per-image standard deviation values for object measurements?:No
-    Output file location:Default Output Folder\x7C
+    Output file location:Default Output Folder sub-folder\x7C
     Create a GenePattern GCT file?:No
     Select source of sample row name:Metadata
     Select the image to use as the identifier:None
@@ -397,9 +397,9 @@ ExportToSpreadsheet:[module_num:21|svn_version:\'Unknown\'|variable_revision_num
     Export all measurement types?:Yes
     :
     Representation of Nan/Inf:NaN
-    Add a prefix to file names?:Yes
-    Filename prefix:MyExpt_
-    Overwrite existing files without warning?:No
+    Add a prefix to file names?:No
+    Filename prefix:
+    Overwrite existing files without warning?:Yes
     Data to export:Do not use
     Combine these object measurements with those of the previous object?:No
     File name:DATA.csv
