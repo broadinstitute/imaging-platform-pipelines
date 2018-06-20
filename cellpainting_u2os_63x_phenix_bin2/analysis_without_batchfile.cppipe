@@ -495,8 +495,8 @@ ExportToSpreadsheet:[module_num:25|svn_version:\'Unknown\'|variable_revision_num
     Export all measurement types?:Yes
     :
     Representation of Nan/Inf:NaN
-    Add a prefix to file names?:Yes
-    Filename prefix:MyExpt_
+    Add a prefix to file names?:No
+    Filename prefix:
     Overwrite existing files without warning?:No
     Data to export:Do not use
     Combine these object measurements with those of the previous object?:No
