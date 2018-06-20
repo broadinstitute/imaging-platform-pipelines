@@ -96,7 +96,7 @@ FlagImage:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_
     Name the flag\'s category:Metadata
     Name the flag:QCFlag_isEmpty
     How should measurements be linked?:Flag if any fail
-    Skip image set if flagged?:Yes
+    Skip image set if flagged?:No
     Flag is based on:Rules
     Select the object to be used for flagging:None
     Which measurement?:None
