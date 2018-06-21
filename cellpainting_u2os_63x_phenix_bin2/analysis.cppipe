@@ -6,8 +6,8 @@ ModuleCount:26
 HasImagePlaneDetails:False
 
 LoadData:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
-    Input data file location:Default Input Folder\x7CDesktop
-    Name of the file:load_data_with_illum.csv
+    Input data file location:Elsewhere...\x7C
+    Name of the file:
     Load images based on this data?:Yes
     Base image location:Default Input Folder\x7C
     Process just a range of rows?:No
@@ -487,7 +487,7 @@ ExportToSpreadsheet:[module_num:25|svn_version:\'Unknown\'|variable_revision_num
     Calculate the per-image mean values for object measurements?:No
     Calculate the per-image median values for object measurements?:No
     Calculate the per-image standard deviation values for object measurements?:No
-    Output file location:Default Output Folder\x7C
+    Output file location:Default Output Folder sub-folder\x7C
     Create a GenePattern GCT file?:No
     Select source of sample row name:Metadata
     Select the image to use as the identifier:None
@@ -497,7 +497,7 @@ ExportToSpreadsheet:[module_num:25|svn_version:\'Unknown\'|variable_revision_num
     Representation of Nan/Inf:NaN
     Add a prefix to file names?:No
     Filename prefix:
-    Overwrite existing files without warning?:No
+    Overwrite existing files without warning?:Yes
     Data to export:Do not use
     Combine these object measurements with those of the previous object?:No
     File name:DATA.csv
