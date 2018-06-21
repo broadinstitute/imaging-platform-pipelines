@@ -4,21 +4,17 @@ Cell Painting and other pipelines from the Imaging Platform.
 
 ## Guidelines for creating pipelines 
 
-1. For each pipeline (e.g. `analysis.cpppipe`), always create a `without_batchfile` version of a pipeline (e.g. `analysis_without_batchfile.cpppipe`) and store in the same directory. The `without_batchfile` version is identical to the version without the suffix, except that the `CreateBatchFiles` module is disabled. The `without_batchfile` version exists because [Distributed-CellProfiler](https://github.com/CellProfiler/Distributed-CellProfiler) does not support the use of batch files. When updating the pipeline, ensure that these two versions are always in sync. 
+-**Note**: 
+Each pipeline has two versions – one with `CreateBatchFiles` module enabled (named e.g. `analysis.cppipe`), and the other with the moduled disabled (named e.g. `analysis_without_batchfile.cppipe`). When updating the pipeline, ensure that these two versions are always in sync. 
+The former is required by a [script](https://github.com/broadinstitute/cellpainting_scripts/blob/master/create_batch_files.sh) for creating CellProfiler batch files, which in turn are used to create a list of groups of images to be processed together, as well as Distributed-CellProfiler configuration files. The latter is used to run the pipeline using [Distributed-CellProfiler](https://github.com/CellProfiler/Distributed-CellProfiler/wiki).
 
-2. The `LoadData` module should always be configured with these values in order that the load data CSV file can be specified on command line
-```
-    Input data file location:Elsewhere...\x7C
-    Name of the file:
-```
-
-3. The `ExportToSpreadsheet` module should always be configured with these values in order that the files are saved in a standard format and location
+2. The `ExportToSpreadsheet` module should always be configured with these values in order that the files are saved in a standard format and location
 ```
     Select the column delimiter:Comma (",")
     Add image metadata columns to your object data file?:No
     Limit output to a size that is allowed in Excel?:No
     Select the measurements to export:No
-    Output file location:Default Output Folder sub-folder\x7C
+    Output file location:Default Output Folder\x7C
     Select source of sample row name:Metadata
     Select the image to use as the identifier:None
     Select the metadata to use as the identifier:None
@@ -34,7 +30,7 @@ Cell Painting and other pipelines from the Imaging Platform.
     Use the object name for the file name?:Yes
 ```
 
-3. The `SaveImages` module should always be configured with these values in order that the files are saved in a standard format and location. The values shown for `Select image name for file prefix` and `Enter single file name` are specific for this example and should be adapted appropriately.
+4. The `SaveImages` module should always be configured with these values in order that the files are saved in a standard format and location. The values shown for `Select image name for file prefix` and `Enter single file name` are specific for this example and should be adapted appropriately.
 
 ```
     Select image name for file prefix:OrigDNA
