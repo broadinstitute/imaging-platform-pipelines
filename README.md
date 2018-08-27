@@ -4,8 +4,9 @@ Cell Painting and other pipelines from the Imaging Platform.
 
 ## Guidelines for creating pipelines 
 
--**Note**: 
-Each pipeline has two versions – one with `CreateBatchFiles` module enabled (named e.g. `analysis.cppipe`), and the other with the moduled disabled (named e.g. `analysis_without_batchfile.cppipe`). When updating the pipeline, ensure that these two versions are always in sync. 
+**Note**: 
+
+1. Each pipeline has two versions – one with `CreateBatchFiles` module enabled (named e.g. `analysis.cppipe`), and the other with the moduled disabled (named e.g. `analysis_without_batchfile.cppipe`). When updating the pipeline, ensure that these two versions are always in sync. 
 The former is required by a [script](https://github.com/broadinstitute/cellpainting_scripts/blob/master/create_batch_files.sh) for creating CellProfiler batch files, which in turn are used to create a list of groups of images to be processed together, as well as Distributed-CellProfiler configuration files. The latter is used to run the pipeline using [Distributed-CellProfiler](https://github.com/CellProfiler/Distributed-CellProfiler/wiki).
 
 2. The `ExportToSpreadsheet` module should always be configured with these values in order that the files are saved in a standard format and location
@@ -30,7 +31,7 @@ The former is required by a [script](https://github.com/broadinstitute/cellpaint
     Use the object name for the file name?:Yes
 ```
 
-4. The `SaveImages` module should always be configured with these values in order that the files are saved in a standard format and location. The values shown for `Select image name for file prefix` and `Enter single file name` are specific for this example and should be adapted appropriately.
+3. The `SaveImages` module should always be configured with these values in order that the files are saved in a standard format and location. The values shown for `Select image name for file prefix` and `Enter single file name` are specific for this example and should be adapted appropriately.
 
 ```
     Select image name for file prefix:OrigDNA
