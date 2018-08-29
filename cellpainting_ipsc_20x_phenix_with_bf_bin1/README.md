@@ -1,2 +1,3 @@
 - The analysis pipeline is customized for iPSCs cells imaged at 20x on Opera Phenix, without binning.
 - The illumination pipeline requires that the image dimensions are a multiple of 10 because it downsamples and upsamples by a factor of 10.
+- Both pipelines were set up to process 2 brightfield channels (which are used for digital phase contrast imaging). There are 7 channels in all: 5 Cell Painting channels + 2 brightfield channels. 
