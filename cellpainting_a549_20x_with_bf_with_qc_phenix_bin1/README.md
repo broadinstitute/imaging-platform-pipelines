@@ -1,0 +1,3 @@
+- The analysis pipeline is customized for A549 cells imaged at 20x on Opera Phenix, without binning.
+- The illumination pipeline requires that the image dimensions are a multiple of 10 because it downsamples and upsamples by a factor of 10.
+- The analysis pipeline was derived from cellpainting_a549_20x_with_bf_phenix_bin1, and the QC was added. The pipeline was used to process plates from the project 2018_02_07_Image_based_Profiling_Pilot
