@@ -1,4 +1,4 @@
-Pipelines for "A dataset of images and morphological profiles of 30,000 small-molecule treatments using the Cell Painting assay", Bray et al. 2016 (http://dx.doi.org/10.5524/100200) 
+Pipelines for "A dataset of images and morphological profiles of 30,000 small-molecule treatments using the Cell Painting assay", Bray et al. 2016 (https://doi.org/10.5524/100200) 
 
 Differences with (cellpainting_u2os_20x_imagexpress/analysis.cppipe)[https://github.com/broadinstitute/imaging-platform-pipelines/blob/master/cellpainting_u2os_20x_imagexpress/analysis.cppipe] are:
 
