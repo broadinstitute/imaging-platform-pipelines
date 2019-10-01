@@ -1,0 +1,106 @@
+CellProfiler Pipeline: http://www.cellprofiler.org
+Version:4
+DateRevision:318
+GitHash:
+ModuleCount:5
+HasImagePlaneDetails:False
+
+LoadData:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Input data file location:\xff\xfeE\x00l\x00s\x00e\x00w\x00h\x00e\x00r\x00e\x00.\x00.\x00.\x00\x7C\x00/\x00U\x00s\x00e\x00r\x00s\x00/\x00b\x00c\x00i\x00m\x00i\x00n\x00i\x00/\x00D\x00o\x00w\x00n\x00l\x00o\x00a\x00d\x00s\x00
+    Name of the file:\xff\xfel\x00o\x00a\x00d\x00_\x00d\x00a\x00t\x00a\x00.\x00c\x00s\x00v\x00
+    Load images based on this data?:\xff\xfeY\x00e\x00s\x00
+    Base image location:\xff\xfeD\x00e\x00f\x00a\x00u\x00l\x00t\x00 \x00I\x00n\x00p\x00u\x00t\x00 \x00F\x00o\x00l\x00d\x00e\x00r\x00\x7C\x00
+    Process just a range of rows?:\xff\xfeN\x00o\x00
+    Rows to process:\xff\xfe1\x00,\x001\x000\x000\x000\x000\x000\x00
+    Group images by metadata?:\xff\xfeY\x00e\x00s\x00
+    Select metadata tags for grouping:\xff\xfeP\x00l\x00a\x00t\x00e\x00,\x00W\x00e\x00l\x00l\x00,\x00S\x00i\x00t\x00e\x00
+    Rescale intensities?:\xff\xfeY\x00e\x00s\x00
+
+MeasureImageQuality:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:5|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Calculate metrics for which images?:\xff\xfeA\x00l\x00l\x00 \x00l\x00o\x00a\x00d\x00e\x00d\x00 \x00i\x00m\x00a\x00g\x00e\x00s\x00
+    Image count:\xff\xfe1\x00
+    Scale count:\xff\xfe4\x00
+    Threshold count:\xff\xfe1\x00
+    Select the images to measure:\xff\xfe
+    Include the image rescaling value?:\xff\xfeY\x00e\x00s\x00
+    Calculate blur metrics?:\xff\xfeY\x00e\x00s\x00
+    Spatial scale for blur measurements:\xff\xfe2\x00
+    Spatial scale for blur measurements:\xff\xfe5\x00
+    Spatial scale for blur measurements:\xff\xfe1\x000\x00
+    Spatial scale for blur measurements:\xff\xfe2\x005\x00
+    Calculate saturation metrics?:\xff\xfeY\x00e\x00s\x00
+    Calculate intensity metrics?:\xff\xfeY\x00e\x00s\x00
+    Calculate thresholds?:\xff\xfeN\x00o\x00
+    Use all thresholding methods?:\xff\xfeY\x00e\x00s\x00
+    Select a thresholding method:\xff\xfeO\x00t\x00s\x00u\x00
+    Typical fraction of the image covered by objects:\xff\xfe0\x00.\x001\x00
+    Two-class or three-class thresholding?:\xff\xfeT\x00w\x00o\x00 \x00c\x00l\x00a\x00s\x00s\x00e\x00s\x00
+    Minimize the weighted variance or the entropy?:\xff\xfeW\x00e\x00i\x00g\x00h\x00t\x00e\x00d\x00 \x00v\x00a\x00r\x00i\x00a\x00n\x00c\x00e\x00
+    Assign pixels in the middle intensity class to the foreground or the background?:\xff\xfeF\x00o\x00r\x00e\x00g\x00r\x00o\x00u\x00n\x00d\x00
+
+MeasureImageQuality:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:5|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Calculate metrics for which images?:\xff\xfeS\x00e\x00l\x00e\x00c\x00t\x00.\x00.\x00.\x00
+    Image count:\xff\xfe2\x00
+    Scale count:\xff\xfe1\x00
+    Threshold count:\xff\xfe1\x00
+    Scale count:\xff\xfe1\x00
+    Threshold count:\xff\xfe1\x00
+    Select the images to measure:\xff\xfeO\x00r\x00i\x00g\x00D\x00N\x00A\x00
+    Include the image rescaling value?:\xff\xfeN\x00o\x00
+    Calculate blur metrics?:\xff\xfeN\x00o\x00
+    Spatial scale for blur measurements:\xff\xfe2\x000\x00
+    Calculate saturation metrics?:\xff\xfeN\x00o\x00
+    Calculate intensity metrics?:\xff\xfeN\x00o\x00
+    Calculate thresholds?:\xff\xfeY\x00e\x00s\x00
+    Use all thresholding methods?:\xff\xfeN\x00o\x00
+    Select a thresholding method:\xff\xfeO\x00t\x00s\x00u\x00
+    Typical fraction of the image covered by objects:\xff\xfe0\x00.\x001\x00
+    Two-class or three-class thresholding?:\xff\xfeT\x00w\x00o\x00 \x00c\x00l\x00a\x00s\x00s\x00e\x00s\x00
+    Minimize the weighted variance or the entropy?:\xff\xfeW\x00e\x00i\x00g\x00h\x00t\x00e\x00d\x00 \x00v\x00a\x00r\x00i\x00a\x00n\x00c\x00e\x00
+    Assign pixels in the middle intensity class to the foreground or the background?:\xff\xfeB\x00a\x00c\x00k\x00g\x00r\x00o\x00u\x00n\x00d\x00
+    Select the images to measure:\xff\xfeO\x00r\x00i\x00g\x00A\x00G\x00P\x00
+    Include the image rescaling value?:\xff\xfeN\x00o\x00
+    Calculate blur metrics?:\xff\xfeN\x00o\x00
+    Spatial scale for blur measurements:\xff\xfe2\x000\x00
+    Calculate saturation metrics?:\xff\xfeN\x00o\x00
+    Calculate intensity metrics?:\xff\xfeN\x00o\x00
+    Calculate thresholds?:\xff\xfeY\x00e\x00s\x00
+    Use all thresholding methods?:\xff\xfeN\x00o\x00
+    Select a thresholding method:\xff\xfeO\x00t\x00s\x00u\x00
+    Typical fraction of the image covered by objects:\xff\xfe0\x00.\x001\x00
+    Two-class or three-class thresholding?:\xff\xfeT\x00h\x00r\x00e\x00e\x00 \x00c\x00l\x00a\x00s\x00s\x00e\x00s\x00
+    Minimize the weighted variance or the entropy?:\xff\xfeW\x00e\x00i\x00g\x00h\x00t\x00e\x00d\x00 \x00v\x00a\x00r\x00i\x00a\x00n\x00c\x00e\x00
+    Assign pixels in the middle intensity class to the foreground or the background?:\xff\xfeF\x00o\x00r\x00e\x00g\x00r\x00o\x00u\x00n\x00d\x00
+
+ExportToSpreadsheet:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:12|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:\xff\xfeC\x00o\x00m\x00m\x00a\x00 \x00(\x00"\x00,\x00"\x00)\x00
+    Add image metadata columns to your object data file?:\xff\xfeN\x00o\x00
+    Select the measurements to export:\xff\xfeN\x00o\x00
+    Calculate the per-image mean values for object measurements?:\xff\xfeN\x00o\x00
+    Calculate the per-image median values for object measurements?:\xff\xfeN\x00o\x00
+    Calculate the per-image standard deviation values for object measurements?:\xff\xfeN\x00o\x00
+    Output file location:\xff\xfeD\x00e\x00f\x00a\x00u\x00l\x00t\x00 \x00O\x00u\x00t\x00p\x00u\x00t\x00 \x00F\x00o\x00l\x00d\x00e\x00r\x00 \x00s\x00u\x00b\x00-\x00f\x00o\x00l\x00d\x00e\x00r\x00\x7C\x00
+    Create a GenePattern GCT file?:\xff\xfeN\x00o\x00
+    Select source of sample row name:\xff\xfeM\x00e\x00t\x00a\x00d\x00a\x00t\x00a\x00
+    Select the image to use as the identifier:\xff\xfeN\x00o\x00n\x00e\x00
+    Select the metadata to use as the identifier:\xff\xfeN\x00o\x00n\x00e\x00
+    Export all measurement types?:\xff\xfeY\x00e\x00s\x00
+    Press button to select measurements:\xff\xfe
+    Representation of Nan/Inf:\xff\xfeN\x00a\x00N\x00
+    Add a prefix to file names?:\xff\xfeY\x00e\x00s\x00
+    Filename prefix:\xff\xfeQ\x00C\x00_\x00
+    Overwrite existing files without warning?:\xff\xfeN\x00o\x00
+    Data to export:\xff\xfeD\x00o\x00 \x00n\x00o\x00t\x00 \x00u\x00s\x00e\x00
+    Combine these object measurements with those of the previous object?:\xff\xfeN\x00o\x00
+    File name:\xff\xfeD\x00A\x00T\x00A\x00.\x00c\x00s\x00v\x00
+    Use the object name for the file name?:\xff\xfeY\x00e\x00s\x00
+
+CreateBatchFiles:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:8|show_window:True|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+    Store batch files in default output folder?:\xff\xfeY\x00e\x00s\x00
+    Output folder path:\xff\xfe/\x00i\x00m\x00a\x00g\x00i\x00n\x00g\x00/\x00a\x00n\x00a\x00l\x00y\x00s\x00i\x00s\x00/\x002\x000\x000\x008\x00_\x001\x002\x00_\x000\x004\x00_\x00I\x00m\x00a\x00g\x00i\x00n\x00g\x00_\x00C\x00D\x00R\x00P\x00_\x00f\x00o\x00r\x00_\x00M\x00L\x00P\x00C\x00N\x00/\x00H\x00D\x00A\x00C\x00_\x00i\x00n\x00h\x00i\x00b\x00i\x00t\x00o\x00r\x00s\x00/\x002\x000\x001\x000\x000\x008\x000\x003\x00
+    Are the cluster computers running Windows?:\xff\xfeN\x00o\x00
+    Hidden\x3A in batch mode:\xff\xfeN\x00o\x00
+    Hidden\x3A in distributed mode:\xff\xfeN\x00o\x00
+    Hidden\x3A default input folder at time of save:\xff\xfe/\x00c\x00b\x00n\x00t\x00/\x00c\x00b\x00i\x00m\x00a\x00g\x00e\x00/\x00H\x00C\x00S\x00
+    Hidden\x3A revision number:\xff\xfe1\x000\x003\x004\x006\x00
+    Hidden\x3A from old matlab:\xff\xfeN\x00o\x00
