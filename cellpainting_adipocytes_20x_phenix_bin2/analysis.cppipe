@@ -927,7 +927,7 @@ ExportToSpreadsheet:[module_num:49|svn_version:\'Unknown\'|variable_revision_num
     File name:\xff\xfeD\x00A\x00T\x00A\x00.\x00c\x00s\x00v\x00
     Use the object name for the file name?:\xff\xfeY\x00e\x00s\x00
 
-CreateBatchFiles:[module_num:50|svn_version:\'Unknown\'|variable_revision_number:8|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+CreateBatchFiles:[module_num:50|svn_version:\'Unknown\'|variable_revision_number:8|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
     Store batch files in default output folder?:\xff\xfeY\x00e\x00s\x00
     Output folder path:\xff\xfe/\x00i\x00m\x00a\x00g\x00i\x00n\x00g\x00/\x00a\x00n\x00a\x00l\x00y\x00s\x00i\x00s\x00/\x002\x000\x000\x008\x00_\x001\x002\x00_\x000\x004\x00_\x00I\x00m\x00a\x00g\x00i\x00n\x00g\x00_\x00C\x00D\x00R\x00P\x00_\x00f\x00o\x00r\x00_\x00M\x00L\x00P\x00C\x00N\x00/\x00H\x00D\x00A\x00C\x00_\x00i\x00n\x00h\x00i\x00b\x00i\x00t\x00o\x00r\x00s\x00/\x002\x000\x001\x000\x000\x008\x000\x003\x00
     Are the cluster computers running Windows?:\xff\xfeN\x00o\x00
