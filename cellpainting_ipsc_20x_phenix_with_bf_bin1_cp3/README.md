@@ -1,0 +1,1 @@
+Same as [cellpainting_ipsc_20x_phenix_with_bf_bin1](https://github.com/broadinstitute/imaging-platform-pipelines/blob/master/cellpainting_ipsc_20x_phenix_with_bf_bin1/README.md) but using CellProfiler 3.
