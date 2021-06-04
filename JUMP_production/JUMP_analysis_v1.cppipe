@@ -53,11 +53,11 @@ CorrectIlluminationApply:[module_num:2|svn_version:'Unknown'|variable_revision_n
     Set output image values greater than 1 equal to 1?:Yes
 
 MeasureImageQuality:[module_num:3|svn_version:'Unknown'|variable_revision_number:6|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
-    Calculate metrics for which images?:All loaded images
+    Calculate metrics for which images?:Select...
     Image count:1
     Scale count:4
     Threshold count:1
-    Select the images to measure:
+    Select the images to measure:OrigAGP, OrigBrightfield, OrigBrightfield_H, OrigBrightfield_L, OrigDNA, OrigER, OrigMito, OrigRNA
     Include the image rescaling value?:Yes
     Calculate blur metrics?:Yes
     Spatial scale for blur measurements:5
