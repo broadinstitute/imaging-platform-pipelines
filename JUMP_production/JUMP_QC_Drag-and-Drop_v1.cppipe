@@ -1,0 +1,503 @@
+CellProfiler Pipeline: http://www.cellprofiler.org
+Version:5
+DateRevision:413
+GitHash:
+ModuleCount:26
+HasImagePlaneDetails:False
+
+Images:[module_num:1|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:['**NOTE** Click the "Output Settings" button (bottom left) and set your output folder!', '', 'Tip: After testing with Test Mode, when ready to run a plate, click Windows > "Hide all windows on run"', '', 'Drag your image folder(s) here.', '']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    :
+    Filter images?:Custom
+    Select the rule criteria:and (extension does isimage) (or (file does contain "f01p"))
+
+Metadata:[module_num:2|svn_version:'Unknown'|variable_revision_number:6|show_window:False|notes:["You will need to configure the Regular Expression field for your own instrument's file naming convention.", "You'll need Plate, WellRow, WellCol, and Site (aka Field).  By default this works for exported Opera Phenix images.", 'Tips: ', '* The Magnification icon button is helpful for confirming the Regular Expressions!', '* Confirm correct extraction by clicking the Update button and inspecting the table below', '']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Extract metadata?:Yes
+    Metadata data type:Text
+    Metadata types:{}
+    Extraction method count:2
+    Metadata extraction method:Extract from file/folder names
+    Metadata source:File name
+    Regular expression to extract from file name:^r(?P<WellRow>[0-9]{2})c(?P<WellCol>[0-9]{2})f(?P<Site>[0-9]{2}).*-ch(?P<ChannelNumber>[0-9]).*
+    Regular expression to extract from folder name:(?P<Date>[0-9]{4}_[0-9]{2}_[0-9]{2})$
+    Extract metadata from:All images
+    Select the filtering criteria:and (file does contain "")
+    Metadata file location:Elsewhere...|
+    Match file and image metadata:[]
+    Use case insensitive matching?:No
+    Metadata file name:None
+    Does cached metadata exist?:No
+    Metadata extraction method:Extract from file/folder names
+    Metadata source:Folder name
+    Regular expression to extract from file name:^(?P<Plate>.*)_(?P<Well>[A-P][0-9]{2})_s(?P<Site>[0-9])_w(?P<ChannelNumber>[0-9])
+    Regular expression to extract from folder name:(?P<Plate>BR[0-9]{8})
+    Extract metadata from:All images
+    Select the filtering criteria:and (file does contain "")
+    Metadata file location:Elsewhere...|
+    Match file and image metadata:[]
+    Use case insensitive matching?:No
+    Metadata file name:None
+    Does cached metadata exist?:No
+
+NamesAndTypes:[module_num:3|svn_version:'Unknown'|variable_revision_number:8|show_window:False|notes:['Youll need to tailor the rule criteria to specify your individual file names for each channel e.g. -chX', ' Youll likely need to adjust the Name to assign ... to match your channel assignments', ' and removing channels if you are not collecting them.', ' ** You need to keep the names consistent', ' and best to keep consistent with all the partners for integration!  e.g. OrigDNA', ' etc.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Assign a name to:Images matching rules
+    Select the image type:Grayscale image
+    Name to assign these images:DNA
+    Match metadata:[]
+    Image set matching method:Order
+    Set intensity range from:Image metadata
+    Assignments count:8
+    Single images count:0
+    Maximum intensity:255.0
+    Process as 3D?:No
+    Relative pixel spacing in X:1.0
+    Relative pixel spacing in Y:1.0
+    Relative pixel spacing in Z:1.0
+    Select the rule criteria:and (file does contain "-ch1")
+    Name to assign these images:OrigMito
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+    Select the rule criteria:and (file does contain "-ch2")
+    Name to assign these images:OrigAGP
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+    Select the rule criteria:and (file does contain "-ch3")
+    Name to assign these images:OrigRNA
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+    Select the rule criteria:and (file does contain "-ch4")
+    Name to assign these images:OrigER
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+    Select the rule criteria:and (file does contain "-ch5")
+    Name to assign these images:OrigDNA
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+    Select the rule criteria:and (file does contain "-ch6")
+    Name to assign these images:OrigBFHigh
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+    Select the rule criteria:and (file does contain "-ch7")
+    Name to assign these images:OrigBFLow
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+    Select the rule criteria:and (file does contain "-ch8")
+    Name to assign these images:OrigBrightfield
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+
+Groups:[module_num:4|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:['JUMP: Not used.', '', 'The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Do you want to group your images?:No
+    grouping metadata count:1
+    Metadata category:None
+
+MeasureImageQuality:[module_num:5|svn_version:'Unknown'|variable_revision_number:6|show_window:False|notes:['JUMP: Nothing to tune.', 'JUMP: This measures per-image QC features, except for thresholds.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Calculate metrics for which images?:All loaded images
+    Image count:1
+    Scale count:4
+    Threshold count:1
+    Select the images to measure:
+    Include the image rescaling value?:Yes
+    Calculate blur metrics?:Yes
+    Spatial scale for blur measurements:5
+    Spatial scale for blur measurements:10
+    Spatial scale for blur measurements:20
+    Spatial scale for blur measurements:50
+    Calculate saturation metrics?:Yes
+    Calculate intensity metrics?:No
+    Calculate thresholds?:No
+    Use all thresholding methods?:No
+    Select a thresholding method:Otsu
+    Typical fraction of the image covered by objects:0.1
+    Two-class or three-class thresholding?:Two classes
+    Minimize the weighted variance or the entropy?:Weighted variance
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+
+MeasureImageQuality:[module_num:6|svn_version:'Unknown'|variable_revision_number:6|show_window:False|notes:['JUMP: This measures thresholds in both the DNA and RNA channels.', 'JUMP: Nothing to tune, UNLESS the segmentation is bad.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Calculate metrics for which images?:Select...
+    Image count:2
+    Scale count:1
+    Threshold count:1
+    Scale count:1
+    Threshold count:1
+    Select the images to measure:OrigDNA
+    Include the image rescaling value?:No
+    Calculate blur metrics?:No
+    Spatial scale for blur measurements:20
+    Calculate saturation metrics?:No
+    Calculate intensity metrics?:No
+    Calculate thresholds?:Yes
+    Use all thresholding methods?:No
+    Select a thresholding method:Otsu
+    Typical fraction of the image covered by objects:0.1
+    Two-class or three-class thresholding?:Two classes
+    Minimize the weighted variance or the entropy?:Weighted variance
+    Assign pixels in the middle intensity class to the foreground or the background?:Background
+    Select the images to measure:OrigRNA
+    Include the image rescaling value?:No
+    Calculate blur metrics?:No
+    Spatial scale for blur measurements:20
+    Calculate saturation metrics?:No
+    Calculate intensity metrics?:No
+    Calculate thresholds?:Yes
+    Use all thresholding methods?:No
+    Select a thresholding method:Otsu
+    Typical fraction of the image covered by objects:0.1
+    Two-class or three-class thresholding?:Three classes
+    Minimize the weighted variance or the entropy?:Weighted variance
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+
+CorrectIlluminationCalculate:[module_num:7|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:['JUMP: Nothing to tune (except possibly the Block Size and Smoothing Filter Size, in case your images are very small/large)', 'JUMP: This calculates the Per-Image illumination function.', 'NOTE: This assumes that the cells are NOT confluent, and thus that there wil be background intensity pixels spread across the image.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigDNA
+    Name the output image:IllumBlue
+    Select how the illumination function is calculated:Background
+    Dilate objects in the final averaged image?:No
+    Dilation radius:1
+    Block size:30
+    Rescale the illumination function?:No
+    Calculate function for each image individually, or based on all images?:Each
+    Smoothing method:Gaussian Filter
+    Method to calculate smoothing filter size:Manually
+    Approximate object diameter:10
+    Smoothing filter size:50
+    Retain the averaged image?:No
+    Name the averaged image:IllumBlueAvg
+    Retain the dilated image?:No
+    Name the dilated image:IllumBlueDilated
+    Automatically calculate spline parameters?:Yes
+    Background mode:auto
+    Number of spline points:5
+    Background threshold:2.0
+    Image resampling factor:2.0
+    Maximum number of iterations:40
+    Residual value for convergence:0.001
+
+CorrectIlluminationApply:[module_num:8|svn_version:'Unknown'|variable_revision_number:5|show_window:False|notes:['JUMP: Nothing to tune.', 'JUMP: This applies the Per-Image illumination function.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigDNA
+    Name the output image:CorrBlue
+    Select the illumination function:IllumBlue
+    Select how the illumination function is applied:Subtract
+    Set output image values less than 0 equal to 0?:Yes
+    Set output image values greater than 1 equal to 1?:Yes
+
+IdentifyPrimaryObjects:[module_num:9|svn_version:'Unknown'|variable_revision_number:14|show_window:False|notes:['JUMP: Tune "Typical diameter of objects" (in pixels) to get good segmentation.', 'JUMP: Tune Threshold Correction Factor to get good segmentation.', '', 'Other parameters can be tuned, but hopefully not necessary.']|batch_state:array(b'', dtype='|S1')|enabled:True|wants_pause:False]
+    Select the input image:CorrBlue
+    Name the primary objects to be identified:Nuclei
+    Typical diameter of objects, in pixel units (Min,Max):15,90
+    Discard objects outside the diameter range?:Yes
+    Discard objects touching the border of the image?:Yes
+    Method to distinguish clumped objects:Shape
+    Method to draw dividing lines between clumped objects:Shape
+    Size of smoothing filter:10
+    Suppress local maxima that are closer than this minimum allowed distance:8
+    Speed up by using lower-resolution image to find local maxima?:No
+    Fill holes in identified objects?:After declumping only
+    Automatically calculate size of smoothing filter for declumping?:No
+    Automatically calculate minimum allowed distance between local maxima?:No
+    Handling of objects if excessive number of objects identified:Continue
+    Maximum number of objects:500
+    Display accepted local maxima?:Yes
+    Select maxima color:Blue
+    Use advanced settings?:Yes
+    Threshold setting version:12
+    Threshold strategy:Global
+    Thresholding method:Minimum Cross-Entropy
+    Threshold smoothing scale:1
+    Threshold correction factor:1.5
+    Lower and upper bounds on threshold:0.005,1
+    Manual threshold:0.0
+    Select the measurement to threshold with:None
+    Two-class or three-class thresholding?:Three classes
+    Log transform before thresholding?:No
+    Assign pixels in the middle intensity class to the foreground or the background?:Background
+    Size of adaptive window:100
+    Lower outlier fraction:0.05
+    Upper outlier fraction:0.05
+    Averaging method:Mean
+    Variance method:Standard deviation
+    # of deviations:2
+    Thresholding method:Otsu
+
+IdentifySecondaryObjects:[module_num:10|svn_version:'Unknown'|variable_revision_number:10|show_window:False|notes:['JUMP: Could tune Threshold Correction factor, but hopefully not']|batch_state:array(b'', dtype='|S1')|enabled:True|wants_pause:False]
+    Select the input objects:Nuclei
+    Name the objects to be identified:Cells
+    Select the method to identify the secondary objects:Watershed - Image
+    Select the input image:OrigRNA
+    Number of pixels by which to expand the primary objects:10
+    Regularization factor:0.05
+    Discard secondary objects touching the border of the image?:No
+    Discard the associated primary objects?:No
+    Name the new primary objects:FilteredNuclei
+    Fill holes in identified objects?:Yes
+    Threshold setting version:12
+    Threshold strategy:Global
+    Thresholding method:Otsu
+    Threshold smoothing scale:0
+    Threshold correction factor:0.7
+    Lower and upper bounds on threshold:0.005,.06
+    Manual threshold:0.0
+    Select the measurement to threshold with:None
+    Two-class or three-class thresholding?:Three classes
+    Log transform before thresholding?:Yes
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+    Size of adaptive window:100
+    Lower outlier fraction:0.05
+    Upper outlier fraction:0.05
+    Averaging method:Mean
+    Variance method:Standard deviation
+    # of deviations:2
+    Thresholding method:Default
+
+IdentifyTertiaryObjects:[module_num:11|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['JUMP: Nothing to tune.']|batch_state:array(b'', dtype='|S1')|enabled:True|wants_pause:True]
+    Select the larger identified objects:Cells
+    Select the smaller identified objects:Nuclei
+    Name the tertiary objects to be identified:Cytoplasm
+    Shrink smaller object prior to subtraction?:Yes
+
+MeasureObjectIntensity:[module_num:12|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:['JUMP: Nothing to tune.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select images to measure:OrigAGP, OrigDNA, OrigER, OrigMito, OrigRNA
+    Select objects to measure:Cells, Nuclei
+
+MeasureImageIntensity:[module_num:13|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:['JUMP: Nothing to tune.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select images to measure:OrigAGP, OrigDNA, OrigER, OrigMito, OrigRNA
+    Measure the intensity only from areas enclosed by objects?:Yes
+    Select input object sets:Cells, Nuclei
+    Calculate custom percentiles:No
+    Specify percentiles to measure:10,90
+
+MeasureObjectSizeShape:[module_num:14|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['JUMP: Nothing to tune.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select object sets to measure:Cells, Nuclei
+    Calculate the Zernike features?:No
+    Calculate the advanced features?:No
+
+FlagImage:[module_num:15|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:['JUMP: This is not used by default, and is deselected.', '', 'If you want to flag images based on a single feature, you can select the green checkbox in the workflow panel, and then below, select the Category and Measurement (i.e. feature) along with appropriate low and/or high values.  ', 'If you want to Skip this image if it meets the flagging criterion, then click the "Skip image..." radio button.']|batch_state:array([], dtype=uint8)|enabled:False|wants_pause:False]
+    Hidden:1
+    Hidden:1
+    Name the flag's category:Metadata
+    Name the flag:QCFlag
+    How should measurements be linked?:Flag if any fail
+    Skip image set if flagged?:No
+    Flag is based on:Whole-image measurement
+    Select the object to be used for flagging:None
+    Which measurement?:Intensity_MeanIntensity_OrigDNA_Cells
+    Flag images based on low values?:Yes
+    Minimum value:1.9
+    Flag images based on high values?:Yes
+    Maximum value:2.1
+    Rules file location:Elsewhere...|
+    Rules file name:rules.txt
+    Class number:
+    Ignore flag skips on last cycle?:No
+
+RescaleIntensity:[module_num:16|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['JUMP: Nothing to tune.', 'Only used for the Saved image.  This will not affect the raw images']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigDNA
+    Name the output image:RescaleDNA
+    Rescaling method:Stretch each image to use the full intensity range
+    Method to calculate the minimum intensity:Custom
+    Method to calculate the maximum intensity:Custom
+    Lower intensity limit for the input image:0.0
+    Upper intensity limit for the input image:1.0
+    Intensity range for the input image:0.0,1.0
+    Intensity range for the output image:0.0,1.0
+    Select image to match in maximum intensity:None
+    Divisor value:1.0
+    Divisor measurement:None
+
+RescaleIntensity:[module_num:17|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['JUMP: Nothing to tune.', 'Only used for the Saved image.  This will not affect the raw images']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigRNA
+    Name the output image:RescaleAGP
+    Rescaling method:Stretch each image to use the full intensity range
+    Method to calculate the minimum intensity:Minimum for each image
+    Method to calculate the maximum intensity:Maximum for each image
+    Lower intensity limit for the input image:0.0
+    Upper intensity limit for the input image:1.0
+    Intensity range for the input image:0.0,1.0
+    Intensity range for the output image:0.2,0.5
+    Select image to match in maximum intensity:None
+    Divisor value:1.0
+    Divisor measurement:None
+
+GrayToColor:[module_num:18|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:['JUMP: Nothing to tune.', 'Only used for the Saved image.  This will not affect the raw images']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:RGB
+    Rescale intensity:No
+    Select the image to be colored red:RescaleDNA
+    Select the image to be colored green:RescaleAGP
+    Select the image to be colored blue:RescaleDNA
+    Name the output image:ColorImage
+    Relative weight for the red image:1
+    Relative weight for the green image:1
+    Relative weight for the blue image:1
+    Select the image to be colored cyan:Leave this black
+    Select the image to be colored magenta:Leave this black
+    Select the image to be colored yellow:Leave this black
+    Select the image that determines brightness:Leave this black
+    Relative weight for the cyan image:1.0
+    Relative weight for the magenta image:1.0
+    Relative weight for the yellow image:1.0
+    Relative weight for the brightness image:1.0
+    Hidden:1
+    Image name:None
+    Color:#ff0000
+    Weight:1.0
+
+ImageMath:[module_num:19|svn_version:'Unknown'|variable_revision_number:5|show_window:False|notes:['JUMP: Nothing to tune.', 'Only used for the Saved image.  This will not affect the raw images']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:None
+    Raise the power of the result by:0.5
+    Multiply the result by:1.0
+    Add to result:0.0
+    Set values less than 0 equal to 0?:Yes
+    Set values greater than 1 equal to 1?:Yes
+    Replace invalid values with 0?:Yes
+    Ignore the image masks?:No
+    Name the output image:ImageAfterMath
+    Image or measurement?:Image
+    Select the first image:ColorImage
+    Multiply the first image by:1.0
+    Measurement:
+    Image or measurement?:Image
+    Select the second image:None
+    Multiply the second image by:1.0
+    Measurement:
+
+OverlayOutlines:[module_num:20|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:['JUMP: Nothing to tune.', 'Only used for the Saved image.  This will not affect the raw images']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Display outlines on a blank image?:No
+    Select image on which to display outlines:ImageAfterMath
+    Name the output image:OrigOverlay2
+    Outline display mode:Color
+    Select method to determine brightness of outlines:Max of image
+    How to outline:Inner
+    Select outline color:white
+    Select objects to display:Nuclei
+    Select outline color:yellow
+    Select objects to display:Cells
+
+SaveImages:[module_num:21|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:['JUMP: Nothing to tune.', 'Depending on the metadata extracted, you might need to adjust the "single file name".  (Note: right click to get extracted Metadata tags)']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:OrigOverlay2
+    Select method for constructing file names:Single name
+    Select image name for file prefix:OrigDNA
+    Enter single file name:\g<Plate>\g<Well>\g<Site>
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:png
+    Output file location:Default Output Folder|
+    Image bit depth:8-bit integer
+    Overwrite existing files without warning?:Yes
+    When to save:Every cycle
+    Record the file and path information to the saved image?:Yes
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+
+OverlayOutlines:[module_num:22|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:['JUMP: This will overlay a Nuclear segmentation outline onto a DNA image.', '', 'Unselected by default, but you may select it along with the following SaveImages.']|batch_state:array([], dtype=uint8)|enabled:False|wants_pause:False]
+    Display outlines on a blank image?:Yes
+    Select image on which to display outlines:ImageAfterMath
+    Name the output image:NucleiOutlines
+    Outline display mode:Grayscale
+    Select method to determine brightness of outlines:Max of image
+    How to outline:Inner
+    Select outline color:white
+    Select objects to display:Nuclei
+    Select outline color:yellow
+    Select objects to display:Cells
+
+SaveImages:[module_num:23|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:['JUMP: This will save the nuclear segmentation outline from the previous OverlayOutlines module.', '', 'Unselected by default, but you may select it along with the previous OverlayOutlines module.']|batch_state:array([], dtype=uint8)|enabled:False|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:NucleiOutlines
+    Select method for constructing file names:Single name
+    Select image name for file prefix:OrigDNA
+    Enter single file name:\g<Plate>\g<Well>\g<Site>_Nuclei
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:png
+    Output file location:Default Output Folder|
+    Image bit depth:8-bit integer
+    Overwrite existing files without warning?:Yes
+    When to save:Every cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+
+ExportToSpreadsheet:[module_num:24|svn_version:'Unknown'|variable_revision_number:13|show_window:False|notes:['JUMP: Nothing to tune.', 'This is used to output ALL the results.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:Yes
+    Add image file and folder names to your object data file?:No
+    Select the measurements to export:No
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder|
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:Yes
+    Press button to select measurements:
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix:
+    Overwrite existing files without warning?:Yes
+    Data to export:Do not use
+    Combine these object measurements with those of the previous object?:No
+    File name:DATA.csv
+    Use the object name for the file name?:Yes
+
+ExportToSpreadsheet:[module_num:25|svn_version:'Unknown'|variable_revision_number:13|show_window:False|notes:['JUMP: Nothing to tune.', 'This is used to output a subset of results for QC purposes.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma (",")
+    Add image metadata columns to your object data file?:Yes
+    Add image file and folder names to your object data file?:No
+    Select the measurements to export:Yes
+    Calculate the per-image mean values for object measurements?:No
+    Calculate the per-image median values for object measurements?:No
+    Calculate the per-image standard deviation values for object measurements?:No
+    Output file location:Default Output Folder|
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:No
+    Press button to select measurements:Image|Intensity_MADIntensity_OrigMito_Cells,Image|Intensity_MADIntensity_OrigER_Cells,Image|Intensity_MADIntensity_OrigDNA_Cells,Image|Intensity_MADIntensity_OrigAGP_Cells,Image|Intensity_MADIntensity_OrigRNA_Cells,Image|Intensity_MedianIntensity_OrigER_Cells,Image|Intensity_MedianIntensity_OrigRNA_Cells,Image|Intensity_MedianIntensity_OrigMito_Cells,Image|Intensity_MedianIntensity_OrigAGP_Cells,Image|Intensity_MedianIntensity_OrigDNA_Cells,Image|PathName_OrigOverlay2,Image|Count_Cells,Image|FileName_OrigOverlay2,Image|Metadata_WellCol,Image|Metadata_Well,Image|Metadata_WellRow,Image|Metadata_Plate,Nuclei|Intensity_MedianIntensity_OrigDNA,Nuclei|Intensity_MedianIntensity_OrigRNA,Nuclei|AreaShape_Area,Cells|Intensity_MedianIntensity_OrigAGP,Cells|Intensity_MedianIntensity_OrigMito,Cells|Intensity_MedianIntensity_OrigRNA,Cells|Intensity_MedianIntensity_OrigER,Cells|AreaShape_Perimeter,Cells|AreaShape_Area
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:Yes
+    Filename prefix:TopLine
+    Overwrite existing files without warning?:Yes
+    Data to export:Image
+    Combine these object measurements with those of the previous object?:No
+    File name:DATA.csv
+    Use the object name for the file name?:Yes
+    Data to export:Nuclei
+    Combine these object measurements with those of the previous object?:No
+    File name:Object.csv
+    Use the object name for the file name?:Yes
+    Data to export:Cells
+    Combine these object measurements with those of the previous object?:No
+    File name:DATA.csv
+    Use the object name for the file name?:Yes
+
+CreateBatchFiles:[module_num:26|svn_version:'Unknown'|variable_revision_number:8|show_window:False|notes:['JUMP: This is not used by default, and is deselected.', 'Though you could create batches for HPC use, which is up to you.']|batch_state:array([], dtype=uint8)|enabled:False|wants_pause:False]
+    Store batch files in default output folder?:Yes
+    Output folder path:/imaging/analysis/2008_12_04_Imaging_CDRP_for_MLPCN/HDAC_inhibitors/20100803
+    Are the cluster computers running Windows?:No
+    Hidden- in batch mode:No
+    Hidden- in distributed mode:No
+    Hidden- default input folder at time of save:/cbnt/cbimage/HCS
+    Hidden- revision number:10346
+    Hidden- from old matlab:No
