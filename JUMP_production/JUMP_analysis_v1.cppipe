@@ -213,7 +213,7 @@ IdentifyPrimaryObjects:[module_num:8|svn_version:'Unknown'|variable_revision_num
     # of deviations:2
     Thresholding method:Otsu
 
-IdentifySecondaryObjects:[module_num:9|svn_version:'Unknown'|variable_revision_number:10|show_window:False|notes:['Identifies ALL cells in image though we will only take measurements on those NOT touching the border of the image (filtered at a later step)']|batch_state:array(b'', dtype='|S1')|enabled:True|wants_pause:False]
+IdentifySecondaryObjects:[module_num:9|svn_version:'Unknown'|variable_revision_number:10|show_window:False|notes:['Identifies ALL cells in image though we will only take measurements on those coming from nuclei NOT touching the border of the image (filtered at a later step)']|batch_state:array(b'', dtype='|S1')|enabled:True|wants_pause:False]
     Select the input objects:NucleiIncludingEdges
     Name the objects to be identified:CellsIncludingEdges
     Select the method to identify the secondary objects:Watershed - Image
