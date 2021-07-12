@@ -2,7 +2,7 @@ CellProfiler Pipeline: http://www.cellprofiler.org
 Version:5
 DateRevision:413
 GitHash:
-ModuleCount:34
+ModuleCount:39
 HasImagePlaneDetails:False
 
 LoadData:[module_num:1|svn_version:'Unknown'|variable_revision_number:6|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
@@ -369,7 +369,79 @@ MeasureTexture:[module_num:20|svn_version:'Unknown'|variable_revision_number:7|s
     Texture scale to measure:5
     Texture scale to measure:10
 
-MaskImage:[module_num:21|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+EnhanceOrSuppressFeatures:[module_num:21|svn_version:'Unknown'|variable_revision_number:7|show_window:False|notes:['1/5 additional modules for special mitochondrial features', 'Enhances the neurite structure in the Mito image.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Mito
+    Name the output image:mito_tubeness
+    Select the operation:Enhance
+    Feature size:10
+    Feature type:Neurites
+    Range of hole sizes:1,10
+    Smoothing scale:1
+    Shear angle:0.0
+    Decay:0.95
+    Enhancement method:Tubeness
+    Speed and accuracy:Fast
+    Rescale result image:Yes
+
+Threshold:[module_num:22|svn_version:'Unknown'|variable_revision_number:12|show_window:False|notes:['2/5 additional modules for special mitochondrial features', 'Thresholds the enhanced mito image']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:mito_tubeness
+    Name the output image:mito_bw
+    Threshold strategy:Global
+    Thresholding method:Minimum Cross-Entropy
+    Threshold smoothing scale:1.3488
+    Threshold correction factor:1
+    Lower and upper bounds on threshold:0,1
+    Manual threshold:0.0
+    Select the measurement to threshold with:None
+    Two-class or three-class thresholding?:Two classes
+    Log transform before thresholding?:No
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+    Size of adaptive window:10
+    Lower outlier fraction:0.05
+    Upper outlier fraction:0.05
+    Averaging method:Mean
+    Variance method:Standard deviation
+    # of deviations:2
+    Thresholding method:Otsu
+
+MorphologicalSkeleton:[module_num:23|svn_version:'Unknown'|variable_revision_number:1|show_window:False|notes:['3/5 additional modules for special mitochondrial features', 'Creates a skeleton from the thresholded mito image']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:mito_bw
+    Name the output image:mito_skel
+
+MeasureObjectSkeleton:[module_num:24|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['4/5 additional modules for special mitochondrial features', 'Measures the skeletonized mito image']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the seed objects:Nuclei
+    Select the skeletonized image:mito_skel
+    Retain the branchpoint image?:Yes
+    Name the branchpoint image:BranchpointImage
+    Fill small holes?:Yes
+    Maximum hole size:10
+    Export the skeleton graph relationships?:No
+    Intensity image:None
+    File output directory:Default Output Folder|
+    Vertex file name:vertices.csv
+    Edge file name:edges.csv
+
+MeasureObjectIntensityDistribution:[module_num:25|svn_version:'Unknown'|variable_revision_number:6|show_window:False|notes:['5/5 additional modules for special mitochondrial features', 'Measures the radial distribution of the enhanced mito image.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select images to measure:mito_tubeness
+    Hidden:2
+    Hidden:2
+    Hidden:0
+    Calculate intensity Zernikes?:None
+    Maximum zernike moment:9
+    Select objects to measure:Cells
+    Object to use as center?:Centers of other objects
+    Select objects to use as centers:Nuclei
+    Select objects to measure:Cytoplasm
+    Object to use as center?:Centers of other objects
+    Select objects to use as centers:Nuclei
+    Scale the bins?:Yes
+    Number of bins:16
+    Maximum radius:100
+    Scale the bins?:No
+    Number of bins:20
+    Maximum radius:200
+
+MaskImage:[module_num:26|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:DNA
     Name the output image:DNA_BackgroundOnly
     Use objects or an image as a mask?:Objects
@@ -377,7 +449,7 @@ MaskImage:[module_num:21|svn_version:'Unknown'|variable_revision_number:3|show_w
     Select image for mask:None
     Invert the mask?:Yes
 
-MaskImage:[module_num:22|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+MaskImage:[module_num:27|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:AGP
     Name the output image:AGP__BackgroundOnly
     Use objects or an image as a mask?:Objects
@@ -385,7 +457,7 @@ MaskImage:[module_num:22|svn_version:'Unknown'|variable_revision_number:3|show_w
     Select image for mask:None
     Invert the mask?:Yes
 
-MaskImage:[module_num:23|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+MaskImage:[module_num:28|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:ER
     Name the output image:ER__BackgroundOnly
     Use objects or an image as a mask?:Objects
@@ -393,7 +465,7 @@ MaskImage:[module_num:23|svn_version:'Unknown'|variable_revision_number:3|show_w
     Select image for mask:None
     Invert the mask?:Yes
 
-MaskImage:[module_num:24|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+MaskImage:[module_num:29|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:BFHigh
     Name the output image:BFHigh__BackgroundOnly
     Use objects or an image as a mask?:Objects
@@ -401,7 +473,7 @@ MaskImage:[module_num:24|svn_version:'Unknown'|variable_revision_number:3|show_w
     Select image for mask:None
     Invert the mask?:Yes
 
-MaskImage:[module_num:25|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+MaskImage:[module_num:30|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:BFLow
     Name the output image:BFLow_BackgroundOnly
     Use objects or an image as a mask?:Objects
@@ -409,7 +481,7 @@ MaskImage:[module_num:25|svn_version:'Unknown'|variable_revision_number:3|show_w
     Select image for mask:None
     Invert the mask?:Yes
 
-MaskImage:[module_num:26|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+MaskImage:[module_num:31|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:Brightfield
     Name the output image:Brightfield_BackgroundOnly
     Use objects or an image as a mask?:Objects
@@ -417,7 +489,7 @@ MaskImage:[module_num:26|svn_version:'Unknown'|variable_revision_number:3|show_w
     Select image for mask:None
     Invert the mask?:Yes
 
-MaskImage:[module_num:27|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+MaskImage:[module_num:32|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:Mito
     Name the output image:Mito_BackgroundOnly
     Use objects or an image as a mask?:Objects
@@ -425,7 +497,7 @@ MaskImage:[module_num:27|svn_version:'Unknown'|variable_revision_number:3|show_w
     Select image for mask:None
     Invert the mask?:Yes
 
-MaskImage:[module_num:28|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+MaskImage:[module_num:33|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['Remove signal in the image that is in cells (including cells that touch the well edge) so that only background remains in the image.', 'Used downstream to measure the intensity of the image without cells present.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the input image:RNA
     Name the output image:RNA_BackgroundOnly
     Use objects or an image as a mask?:Objects
@@ -433,14 +505,14 @@ MaskImage:[module_num:28|svn_version:'Unknown'|variable_revision_number:3|show_w
     Select image for mask:None
     Invert the mask?:Yes
 
-MeasureImageIntensity:[module_num:29|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:['Measures the ntensity of the whole image (AGP, BFHigh, BFLow, Brightfield, DNA, ER, Mito, RNA) as well as the intensity of the image only in regions without cells (* _BackgroundOnly).']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+MeasureImageIntensity:[module_num:34|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:['Measures the ntensity of the whole image (AGP, BFHigh, BFLow, Brightfield, DNA, ER, Mito, RNA) as well as the intensity of the image only in regions without cells (* _BackgroundOnly).']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select images to measure:AGP, AGP__BackgroundOnly, BFHigh, BFHigh__BackgroundOnly, BFLow, BFLow_BackgroundOnly, Brightfield, Brightfield_BackgroundOnly, DNA, DNA_BackgroundOnly, ER, ER__BackgroundOnly, Mito, Mito_BackgroundOnly, RNA, RNA_BackgroundOnly
     Measure the intensity only from areas enclosed by objects?:No
     Select input object sets:
     Calculate custom percentiles:No
     Specify percentiles to measure:10,90
 
-OverlayOutlines:[module_num:30|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+OverlayOutlines:[module_num:35|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Display outlines on a blank image?:Yes
     Select image on which to display outlines:None
     Name the output image:NucleiOutlines
@@ -450,7 +522,7 @@ OverlayOutlines:[module_num:30|svn_version:'Unknown'|variable_revision_number:4|
     Select outline color:Red
     Select objects to display:Nuclei
 
-OverlayOutlines:[module_num:31|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+OverlayOutlines:[module_num:36|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Display outlines on a blank image?:Yes
     Select image on which to display outlines:None
     Name the output image:CellOutlines
@@ -460,7 +532,7 @@ OverlayOutlines:[module_num:31|svn_version:'Unknown'|variable_revision_number:4|
     Select outline color:Red
     Select objects to display:Cells
 
-SaveImages:[module_num:32|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:37|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:NucleiOutlines
     Select method for constructing file names:Single name
@@ -479,7 +551,7 @@ SaveImages:[module_num:32|svn_version:'Unknown'|variable_revision_number:15|show
     Base image folder:Default Input Folder
     How to save the series:T (Time)
 
-SaveImages:[module_num:33|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+SaveImages:[module_num:38|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the type of image to save:Image
     Select the image to save:CellOutlines
     Select method for constructing file names:Single name
@@ -498,7 +570,7 @@ SaveImages:[module_num:33|svn_version:'Unknown'|variable_revision_number:15|show
     Base image folder:Default Input Folder
     How to save the series:T (Time)
 
-ExportToSpreadsheet:[module_num:34|svn_version:'Unknown'|variable_revision_number:13|show_window:False|notes:['We explicitly set which measurement types to export so that we do NOT export measurements of the objects touching the well edges as we ONLY want them for masking and not to use for measurements.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+ExportToSpreadsheet:[module_num:39|svn_version:'Unknown'|variable_revision_number:13|show_window:False|notes:['We explicitly set which measurement types to export so that we do NOT export measurements of the objects touching the well edges as we ONLY want them for masking and not to use for measurements.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the column delimiter:Comma (",")
     Add image metadata columns to your object data file?:No
     Add image file and folder names to your object data file?:No
@@ -534,10 +606,6 @@ ExportToSpreadsheet:[module_num:34|svn_version:'Unknown'|variable_revision_numbe
     File name:DATA.csv
     Use the object name for the file name?:Yes
     Data to export:Nuclei
-    Combine these object measurements with those of the previous object?:No
-    File name:DATA.csv
-    Use the object name for the file name?:Yes
-    Data to export:Object relationships
     Combine these object measurements with those of the previous object?:No
     File name:DATA.csv
     Use the object name for the file name?:Yes
