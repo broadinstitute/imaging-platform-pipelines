@@ -411,7 +411,7 @@ MorphologicalSkeleton:[module_num:23|svn_version:'Unknown'|variable_revision_num
 MeasureObjectSkeleton:[module_num:24|svn_version:'Unknown'|variable_revision_number:3|show_window:False|notes:['4/5 additional modules for special mitochondrial features', 'Measures the skeletonized mito image']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
     Select the seed objects:Nuclei
     Select the skeletonized image:mito_skel
-    Retain the branchpoint image?:Yes
+    Retain the branchpoint image?:No
     Name the branchpoint image:BranchpointImage
     Fill small holes?:Yes
     Maximum hole size:10
