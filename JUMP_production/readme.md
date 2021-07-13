@@ -1,9 +1,10 @@
 ## Production pipelines 
 
-### Feature extraction pipelines
+### 1. Feature extraction pipelines
 - `JUMP_illum_LoadData_v1.cppipe`
 - `JUMP_segment_LoadData_v1.cppipe`
-- `JUMP_analysis_v1.cppipe`
+- `JUMP_analysis_v2.cppipe` : Second verison of the analysis pipeline with additional modules for special mitochondrial features, including EnhanceOrSuppressFeatures, Threshold, MorphologicalSkeleton, MeasureObjectSkeleton, MeasureObjectIntensityDistribution. Mito special features will contain either mito_skel or mito_tubeness in their name. 
+
 
 ### on-the-fly QC pipelines
 - `JUMP_QC_Drag-and-Drop_v1.cppipe`: QC feature extraction pipeline with drag-and-drop functionality to load images in a quick way
