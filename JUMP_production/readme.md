@@ -2,7 +2,7 @@
 
 ### 1. Feature extraction pipelines
 - `JUMP_illum_LoadData_v1.cppipe`
-- `JUMP_segment_LoadData_v1.cppipe`
+- `JUMP_segment_LoadData_v1.cppipe` : This is not necessary for data generation. It is useful for testing segmentation parameters across your dataset prior to running the analysis pipeline. It outputs an overlay image of the Nuclei and Cells objects identified using the segmentation parameters set in the pipeline overlaid on the input image.
 - `JUMP_analysis_v2.cppipe` : Second verison of the analysis pipeline with additional modules for special mitochondrial features, including EnhanceOrSuppressFeatures, Threshold, MorphologicalSkeleton, MeasureObjectSkeleton, MeasureObjectIntensityDistribution. Mito special features will contain either mito_skel or mito_tubeness in their name. 
 
 
