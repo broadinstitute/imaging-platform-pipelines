@@ -3,12 +3,12 @@
 ### 1. Feature extraction pipelines
 - `JUMP_illum_LoadData_v1.cppipe`
 - `JUMP_segment_LoadData_v1.cppipe` : This is not necessary for data generation. It is useful for testing segmentation parameters across your dataset prior to running the analysis pipeline. It outputs an overlay image of the Nuclei and Cells objects identified using the segmentation parameters set in the pipeline overlaid on the input image.
-- `JUMP_analysis_v2.cppipe` : Second verison of the analysis pipeline with additional modules for special mitochondrial features, including EnhanceOrSuppressFeatures, Threshold, MorphologicalSkeleton, MeasureObjectSkeleton, MeasureObjectIntensityDistribution. Mito special features will contain either mito_skel or mito_tubeness in their name. 
+- `JUMP_analysis_v2.cppipe` : Second version of the analysis pipeline with additional modules for special mitochondrial features, including EnhanceOrSuppressFeatures, Threshold, MorphologicalSkeleton, MeasureObjectSkeleton, MeasureObjectIntensityDistribution. Mito special features will contain either mito_skel or mito_tubeness in their name. 
 
 
 ### on-the-fly QC pipelines
 - `JUMP_QC_Drag-and-Drop_v1.cppipe`: QC feature extraction pipeline with drag-and-drop functionality to load images in a quick way
-- `JUMP_QC_LoadData_v1.cppipe`: QC feature extraciton pipeline using LoadData module to load images in a systematic way
+- `JUMP_QC_LoadData_v1.cppipe`: QC feature extraction pipeline using LoadData module to load images in a systematic way
 - `JUMP_QC_Plate-CV_v1.knwf`: Knime pipeline to visualize plate QC results 
 - `JUMP_QC_Drag-and-Drop_Notes.docx`: Notes on how to run the complete on-the-fly QC. Also explained below and in a [demo](https://jjcloud.box.com/s/qlxp7o3bbp02yejvl318udd4ap5gotf1) (starting on minute 3:45)
 
