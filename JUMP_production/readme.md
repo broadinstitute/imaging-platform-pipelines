@@ -1,13 +1,20 @@
-## Production pipelines 
+## JUMP Production
+For the [cpg0016-jump](https://github.com/broadinstitute/cellpainting-gallery?tab=readme-ov-file) [JUMP](https://github.com/jump-cellpainting/datasets) production data:  
+`JUMP_illum_LoadData_v1.cppipe` was used to make the flat-field illumination correction files  
+`JUMP_analysis_v3.cppipe` was used to apply the illumination correction and perform feature extraction  
 
-### 1. Feature extraction pipelines
-- `JUMP_illum_LoadData_v1.cppipe`
+## Pipeline descriptions 
+
+### Image processing
+- `JUMP_illum_LoadData_v1.cppipe`: This is for making flat-field illumination correction files.
 - `JUMP_segment_LoadData_v1.cppipe` : This is not necessary for data generation. It is useful for testing segmentation parameters across your dataset prior to running the analysis pipeline. It outputs an overlay image of the Nuclei and Cells objects identified using the segmentation parameters set in the pipeline overlaid on the input image.
 - `JUMP_analysis_v2.cppipe` : Second version of the analysis pipeline with additional modules for special mitochondrial features, including EnhanceOrSuppressFeatures, Threshold, MorphologicalSkeleton, MeasureObjectSkeleton, MeasureObjectIntensityDistribution. Mito special features will contain either mito_skel or mito_tubeness in their name. 
 - `JUMP_analysis_v3.cppipe` : Third version of the analysis pipeline, turning off the exporting of measurements starting with the word `Location` for Cells and Cytoplasm as well as `Number_Object_Number` from Cells only, because a) those measurements are not useful on their own (only relative to one another, which is not an analysis we currently ever perform) and b) the added measurements added in v2 resulted in >2000 measurements for those compartments, which would complicate using SQLite if not manually compiled.  If you wish to use those measurements, you may do so, but you must use something besides SQLite (MySQL, Parquet, etc) to store your per-plate databases OR you must [manually compile SQLite](https://gist.github.com/bethac07/1888995cebd3723eb47d04020d65dc7e). If you wish to remove these columns from data that has been processed via the v2 pipeline to avoid the need to reprocess, you may find [this gist](https://gist.github.com/bethac07/c907850982e5ba8164a14f963504edc9) helpful in doing so.
 
+### QC pipeline/workflow
 
-### on-the-fly QC pipelines
+These pipelines/workflow were provided for quickly measuring QC metrics during image acquisition.
+
 - `JUMP_QC_Drag-and-Drop_v1.cppipe`: QC feature extraction pipeline with drag-and-drop functionality to load images in a quick way
 - `JUMP_QC_LoadData_v1.cppipe`: QC feature extraction pipeline using LoadData module to load images in a systematic way
 - `JUMP_QC_Plate-CV_v1.knwf`: Knime pipeline to visualize plate QC results 
