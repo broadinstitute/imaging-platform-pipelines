@@ -1,0 +1,409 @@
+CellProfiler Pipeline: http://www.cellprofiler.org
+Version:4
+DateRevision:319
+GitHash:
+ModuleCount:23
+HasImagePlaneDetails:False
+
+LoadData:[module_num:1|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Input data file location:\xff\xfeD\x00e\x00f\x00a\x00u\x00l\x00t\x00 \x00I\x00n\x00p\x00u\x00t\x00 \x00F\x00o\x00l\x00d\x00e\x00r\x00 \x00s\x00u\x00b\x00-\x00f\x00o\x00l\x00d\x00e\x00r\x00\x7C\x00D\x00e\x00s\x00k\x00t\x00o\x00p\x00\\\x00l\x00o\x00a\x00d\x00_\x00d\x00a\x00t\x00a\x00_\x00c\x00s\x00v\x00\\\x002\x000\x002\x002\x00_\x000\x003\x00_\x000\x003\x00_\x00N\x00C\x00P\x00_\x00N\x00E\x00U\x00R\x00O\x00N\x00S\x00_\x002\x00_\x006\x003\x00x\x00\\\x00B\x00R\x000\x000\x001\x003\x002\x006\x007\x002\x00
+    Name of the file:\xff\xfel\x00o\x00a\x00d\x00_\x00d\x00a\x00t\x00a\x00_\x00w\x00i\x00t\x00h\x00_\x00i\x00l\x00l\x00u\x00m\x00.\x00c\x00s\x00v\x00
+    Load images based on this data?:\xff\xfeY\x00e\x00s\x00
+    Base image location:\xff\xfeD\x00e\x00f\x00a\x00u\x00l\x00t\x00 \x00I\x00n\x00p\x00u\x00t\x00 \x00F\x00o\x00l\x00d\x00e\x00r\x00\x7C\x00
+    Process just a range of rows?:\xff\xfeN\x00o\x00
+    Rows to process:\xff\xfe1\x00,\x001\x000\x000\x000\x000\x000\x00
+    Group images by metadata?:\xff\xfeY\x00e\x00s\x00
+    Select metadata tags for grouping:\xff\xfeP\x00l\x00a\x00t\x00e\x00,\x00W\x00e\x00l\x00l\x00
+    Rescale intensities?:\xff\xfeY\x00e\x00s\x00
+
+FlagImage:[module_num:2|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Hidden:\xff\xfe1\x00
+    Hidden:\xff\xfe1\x00
+    Name the flag\'s category:\xff\xfeM\x00e\x00t\x00a\x00d\x00a\x00t\x00a\x00
+    Name the flag:\xff\xfeQ\x00C\x00F\x00l\x00a\x00g\x00
+    How should measurements be linked?:\xff\xfeF\x00l\x00a\x00g\x00 \x00i\x00f\x00 \x00a\x00n\x00y\x00 \x00f\x00a\x00i\x00l\x00
+    Skip image set if flagged?:\xff\xfeY\x00e\x00s\x00
+    Flag is based on:\xff\xfeW\x00h\x00o\x00l\x00e\x00-\x00i\x00m\x00a\x00g\x00e\x00 \x00m\x00e\x00a\x00s\x00u\x00r\x00e\x00m\x00e\x00n\x00t\x00
+    Select the object to be used for flagging:\xff\xfeN\x00o\x00n\x00e\x00
+    Which measurement?:\xff\xfeM\x00e\x00t\x00a\x00d\x00a\x00t\x00a\x00_\x00S\x00i\x00t\x00e\x00
+    Flag images based on low values?:\xff\xfeY\x00e\x00s\x00
+    Minimum value:\xff\xfe1\x00.\x009\x00
+    Flag images based on high values?:\xff\xfeY\x00e\x00s\x00
+    Maximum value:\xff\xfe2\x00.\x001\x00
+    Rules file location:\xff\xfeE\x00l\x00s\x00e\x00w\x00h\x00e\x00r\x00e\x00.\x00.\x00.\x00\x7C\x00
+    Rules file name:\xff\xfer\x00u\x00l\x00e\x00s\x00.\x00t\x00x\x00t\x00
+    Class number:\xff\xfe
+
+CorrectIlluminationApply:[module_num:3|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\'\', dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
+    Select the input image:\xff\xfeO\x00r\x00i\x00g\x00D\x00N\x00A\x00
+    Name the output image:\xff\xfeP\x00r\x00e\x00D\x00N\x00A\x00
+    Select the illumination function:\xff\xfeI\x00l\x00l\x00u\x00m\x00D\x00N\x00A\x00
+    Select how the illumination function is applied:\xff\xfeD\x00i\x00v\x00i\x00d\x00e\x00
+    Select the input image:\xff\xfeO\x00r\x00i\x00g\x00E\x00R\x00
+    Name the output image:\xff\xfeP\x00r\x00e\x00E\x00R\x00
+    Select the illumination function:\xff\xfeI\x00l\x00l\x00u\x00m\x00E\x00R\x00
+    Select how the illumination function is applied:\xff\xfeD\x00i\x00v\x00i\x00d\x00e\x00
+    Select the input image:\xff\xfeO\x00r\x00i\x00g\x00A\x00G\x00P\x00
+    Name the output image:\xff\xfeP\x00r\x00e\x00A\x00G\x00P\x00
+    Select the illumination function:\xff\xfeI\x00l\x00l\x00u\x00m\x00A\x00G\x00P\x00
+    Select how the illumination function is applied:\xff\xfeD\x00i\x00v\x00i\x00d\x00e\x00
+    Select the input image:\xff\xfeO\x00r\x00i\x00g\x00M\x00i\x00t\x00o\x00
+    Name the output image:\xff\xfeP\x00r\x00e\x00M\x00i\x00t\x00o\x00
+    Select the illumination function:\xff\xfeI\x00l\x00l\x00u\x00m\x00M\x00i\x00t\x00o\x00
+    Select how the illumination function is applied:\xff\xfeD\x00i\x00v\x00i\x00d\x00e\x00
+    Select the input image:\xff\xfeO\x00r\x00i\x00g\x00R\x00N\x00A\x00
+    Name the output image:\xff\xfeP\x00r\x00e\x00R\x00N\x00A\x00
+    Select the illumination function:\xff\xfeI\x00l\x00l\x00u\x00m\x00R\x00N\x00A\x00
+    Select how the illumination function is applied:\xff\xfeD\x00i\x00v\x00i\x00d\x00e\x00
+    Select the input image:\xff\xfeO\x00r\x00i\x00g\x00B\x00r\x00i\x00g\x00h\x00t\x00f\x00i\x00e\x00l\x00d\x00
+    Name the output image:\xff\xfeP\x00r\x00e\x00B\x00r\x00i\x00g\x00h\x00t\x00f\x00i\x00e\x00l\x00d\x00
+    Select the illumination function:\xff\xfeI\x00l\x00l\x00u\x00m\x00B\x00r\x00i\x00g\x00h\x00t\x00f\x00i\x00e\x00l\x00d\x00
+    Select how the illumination function is applied:\xff\xfeD\x00i\x00v\x00i\x00d\x00e\x00
+
+ImageMath:[module_num:4|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe1\x00.\x000\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeD\x00N\x00A\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeP\x00r\x00e\x00D\x00N\x00A\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+ImageMath:[module_num:5|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe1\x00.\x000\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeE\x00R\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeP\x00r\x00e\x00E\x00R\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+ImageMath:[module_num:6|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe1\x00.\x000\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeA\x00G\x00P\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeP\x00r\x00e\x00A\x00G\x00P\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+ImageMath:[module_num:7|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe1\x00.\x000\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeM\x00i\x00t\x00o\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeP\x00r\x00e\x00M\x00i\x00t\x00o\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+ImageMath:[module_num:8|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe1\x00.\x000\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeR\x00N\x00A\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeP\x00r\x00e\x00R\x00N\x00A\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+ImageMath:[module_num:9|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe1\x00.\x000\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeB\x00r\x00i\x00g\x00h\x00t\x00f\x00i\x00e\x00l\x00d\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeP\x00r\x00e\x00B\x00r\x00i\x00g\x00h\x00t\x00f\x00i\x00e\x00l\x00d\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+EnhanceOrSuppressFeatures:[module_num:10|svn_version:\'Unknown\'|variable_revision_number:6|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:False|wants_pause:False]
+    Select the input image:\xff\xfeD\x00N\x00A\x00
+    Name the output image:\xff\xfeF\x00i\x00l\x00t\x00e\x00r\x00e\x00d\x00D\x00N\x00A\x00
+    Select the operation:\xff\xfeE\x00n\x00h\x00a\x00n\x00c\x00e\x00
+    Feature size:\xff\xfe1\x000\x000\x00
+    Feature type:\xff\xfeS\x00p\x00e\x00c\x00k\x00l\x00e\x00s\x00
+    Range of hole sizes:\xff\xfe1\x00,\x001\x000\x00
+    Smoothing scale:\xff\xfe2\x00.\x000\x00
+    Shear angle:\xff\xfe0\x00.\x000\x00
+    Decay:\xff\xfe0\x00.\x009\x005\x00
+    Enhancement method:\xff\xfeT\x00u\x00b\x00e\x00n\x00e\x00s\x00s\x00
+    Speed and accuracy:\xff\xfeF\x00a\x00s\x00t\x00
+
+IdentifyPrimaryObjects:[module_num:11|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\'\', \'1.2\x3A 0.03\'\x5D|batch_state:array(\'\', dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
+    Select the input image:\xff\xfeD\x00N\x00A\x00
+    Name the primary objects to be identified:\xff\xfeN\x00u\x00c\x00l\x00e\x00i\x00
+    Typical diameter of objects, in pixel units (Min,Max):\xff\xfe7\x000\x00,\x002\x002\x000\x00
+    Discard objects outside the diameter range?:\xff\xfeY\x00e\x00s\x00
+    Discard objects touching the border of the image?:\xff\xfeY\x00e\x00s\x00
+    Method to distinguish clumped objects:\xff\xfeS\x00h\x00a\x00p\x00e\x00
+    Method to draw dividing lines between clumped objects:\xff\xfeS\x00h\x00a\x00p\x00e\x00
+    Size of smoothing filter:\xff\xfe1\x002\x00
+    Suppress local maxima that are closer than this minimum allowed distance:\xff\xfe1\x005\x00
+    Speed up by using lower-resolution image to find local maxima?:\xff\xfeY\x00e\x00s\x00
+    Fill holes in identified objects?:\xff\xfeA\x00f\x00t\x00e\x00r\x00 \x00b\x00o\x00t\x00h\x00 \x00t\x00h\x00r\x00e\x00s\x00h\x00o\x00l\x00d\x00i\x00n\x00g\x00 \x00a\x00n\x00d\x00 \x00d\x00e\x00c\x00l\x00u\x00m\x00p\x00i\x00n\x00g\x00
+    Automatically calculate size of smoothing filter for declumping?:\xff\xfeY\x00e\x00s\x00
+    Automatically calculate minimum allowed distance between local maxima?:\xff\xfeY\x00e\x00s\x00
+    Handling of objects if excessive number of objects identified:\xff\xfeC\x00o\x00n\x00t\x00i\x00n\x00u\x00e\x00
+    Maximum number of objects:\xff\xfe5\x000\x000\x00
+    Use advanced settings?:\xff\xfeY\x00e\x00s\x00
+    Threshold setting version:\xff\xfe9\x00
+    Threshold strategy:\xff\xfeG\x00l\x00o\x00b\x00a\x00l\x00
+    Thresholding method:\xff\xfeM\x00i\x00n\x00i\x00m\x00u\x00m\x00 \x00c\x00r\x00o\x00s\x00s\x00 \x00e\x00n\x00t\x00r\x00o\x00p\x00y\x00
+    Threshold smoothing scale:\xff\xfe1\x00.\x003\x004\x008\x008\x00
+    Threshold correction factor:\xff\xfe1\x00
+    Lower and upper bounds on threshold:\xff\xfe0\x00.\x000\x001\x00,\x001\x00
+    Manual threshold:\xff\xfe0\x00.\x000\x00
+    Select the measurement to threshold with:\xff\xfeN\x00o\x00n\x00e\x00
+    Two-class or three-class thresholding?:\xff\xfeT\x00h\x00r\x00e\x00e\x00 \x00c\x00l\x00a\x00s\x00s\x00e\x00s\x00
+    Assign pixels in the middle intensity class to the foreground or the background?:\xff\xfeB\x00a\x00c\x00k\x00g\x00r\x00o\x00u\x00n\x00d\x00
+    Size of adaptive window:\xff\xfe1\x000\x00
+    Lower outlier fraction:\xff\xfe0\x00.\x000\x005\x00
+    Upper outlier fraction:\xff\xfe0\x00.\x000\x005\x00
+    Averaging method:\xff\xfeM\x00e\x00a\x00n\x00
+    Variance method:\xff\xfeS\x00t\x00a\x00n\x00d\x00a\x00r\x00d\x00 \x00d\x00e\x00v\x00i\x00a\x00t\x00i\x00o\x00n\x00
+    # of deviations:\xff\xfe2\x00
+    Thresholding method:\xff\xfeD\x00e\x00f\x00a\x00u\x00l\x00t\x00
+
+ImageMath:[module_num:12|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe0\x00.\x003\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeA\x00G\x00P\x00E\x00x\x00p\x00o\x00n\x00e\x00n\x00t\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeA\x00G\x00P\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+MeasureImageIntensity:[module_num:13|svn_version:\'Unknown\'|variable_revision_number:2|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the image to measure:\xff\xfeA\x00G\x00P\x00E\x00x\x00p\x00o\x00n\x00e\x00n\x00t\x00
+    Measure the intensity only from areas enclosed by objects?:\xff\xfeN\x00o\x00
+    Select the input objects:\xff\xfeN\x00o\x00n\x00e\x00
+
+ImageMath:[module_num:14|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeS\x00u\x00b\x00t\x00r\x00a\x00c\x00t\x00
+    Raise the power of the result by:\xff\xfe1\x00.\x000\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeA\x00G\x00P\x00B\x00a\x00c\x00k\x00S\x00u\x00b\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeA\x00G\x00P\x00E\x00x\x00p\x00o\x00n\x00e\x00n\x00t\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeM\x00e\x00a\x00s\x00u\x00r\x00e\x00m\x00e\x00n\x00t\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfeI\x00n\x00t\x00e\x00n\x00s\x00i\x00t\x00y\x00_\x00M\x00i\x00n\x00I\x00n\x00t\x00e\x00n\x00s\x00i\x00t\x00y\x00_\x00A\x00G\x00P\x00E\x00x\x00p\x00o\x00n\x00e\x00n\x00t\x00
+
+IdentifySecondaryObjects:[module_num:15|svn_version:\'Unknown\'|variable_revision_number:10|show_window:False|notes:\x5B\x5D|batch_state:array(\'\', dtype=\'\x7CS1\')|enabled:True|wants_pause:False]
+    Select the input objects:\xff\xfeN\x00u\x00c\x00l\x00e\x00i\x00
+    Name the objects to be identified:\xff\xfeC\x00e\x00l\x00l\x00s\x00
+    Select the method to identify the secondary objects:\xff\xfeP\x00r\x00o\x00p\x00a\x00g\x00a\x00t\x00i\x00o\x00n\x00
+    Select the input image:\xff\xfeA\x00G\x00P\x00B\x00a\x00c\x00k\x00S\x00u\x00b\x00
+    Number of pixels by which to expand the primary objects:\xff\xfe1\x000\x00
+    Regularization factor:\xff\xfe0\x00.\x000\x000\x000\x000\x005\x00
+    Discard secondary objects touching the border of the image?:\xff\xfeN\x00o\x00
+    Discard the associated primary objects?:\xff\xfeN\x00o\x00
+    Name the new primary objects:\xff\xfeF\x00i\x00l\x00t\x00e\x00r\x00e\x00d\x00N\x00u\x00c\x00l\x00e\x00i\x00
+    Fill holes in identified objects?:\xff\xfeN\x00o\x00
+    Threshold setting version:\xff\xfe9\x00
+    Threshold strategy:\xff\xfeG\x00l\x00o\x00b\x00a\x00l\x00
+    Thresholding method:\xff\xfeO\x00t\x00s\x00u\x00
+    Threshold smoothing scale:\xff\xfe0\x00
+    Threshold correction factor:\xff\xfe0\x00.\x009\x005\x00
+    Lower and upper bounds on threshold:\xff\xfe0\x00.\x000\x005\x00,\x001\x00
+    Manual threshold:\xff\xfe0\x00.\x000\x00
+    Select the measurement to threshold with:\xff\xfeN\x00o\x00n\x00e\x00
+    Two-class or three-class thresholding?:\xff\xfeT\x00h\x00r\x00e\x00e\x00 \x00c\x00l\x00a\x00s\x00s\x00e\x00s\x00
+    Assign pixels in the middle intensity class to the foreground or the background?:\xff\xfeF\x00o\x00r\x00e\x00g\x00r\x00o\x00u\x00n\x00d\x00
+    Size of adaptive window:\xff\xfe1\x000\x00
+    Lower outlier fraction:\xff\xfe0\x00.\x000\x005\x00
+    Upper outlier fraction:\xff\xfe0\x00.\x000\x005\x00
+    Averaging method:\xff\xfeM\x00e\x00a\x00n\x00
+    Variance method:\xff\xfeS\x00t\x00a\x00n\x00d\x00a\x00r\x00d\x00 \x00d\x00e\x00v\x00i\x00a\x00t\x00i\x00o\x00n\x00
+    # of deviations:\xff\xfe2\x00
+    Thresholding method:\xff\xfeD\x00e\x00f\x00a\x00u\x00l\x00t\x00
+
+IdentifyTertiaryObjects:[module_num:16|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\'\', dtype=\'\x7CS1\')|enabled:True|wants_pause:True]
+    Select the larger identified objects:\xff\xfeC\x00e\x00l\x00l\x00s\x00
+    Select the smaller identified objects:\xff\xfeN\x00u\x00c\x00l\x00e\x00i\x00
+    Name the tertiary objects to be identified:\xff\xfeC\x00y\x00t\x00o\x00p\x00l\x00a\x00s\x00m\x00
+    Shrink smaller object prior to subtraction?:\xff\xfeY\x00e\x00s\x00
+
+ImageMath:[module_num:17|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe0\x00.\x003\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeA\x00G\x00P\x00R\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00F\x00o\x00r\x00V\x00i\x00s\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeA\x00G\x00P\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+ImageMath:[module_num:18|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Operation:\xff\xfeN\x00o\x00n\x00e\x00
+    Raise the power of the result by:\xff\xfe0\x00.\x002\x00
+    Multiply the result by:\xff\xfe1\x00.\x000\x00
+    Add to result:\xff\xfe0\x00.\x000\x00
+    Set values less than 0 equal to 0?:\xff\xfeY\x00e\x00s\x00
+    Set values greater than 1 equal to 1?:\xff\xfeY\x00e\x00s\x00
+    Ignore the image masks?:\xff\xfeN\x00o\x00
+    Name the output image:\xff\xfeD\x00N\x00A\x00R\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00F\x00o\x00r\x00V\x00i\x00s\x00
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the first image:\xff\xfeD\x00N\x00A\x00
+    Multiply the first image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+    Image or measurement?:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the second image:\xff\xfe
+    Multiply the second image by:\xff\xfe1\x00.\x000\x00
+    Measurement:\xff\xfe
+
+RescaleIntensity:[module_num:19|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:\xff\xfeA\x00G\x00P\x00R\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00F\x00o\x00r\x00V\x00i\x00s\x00
+    Name the output image:\xff\xfeR\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00A\x00G\x00P\x00
+    Rescaling method:\xff\xfeS\x00t\x00r\x00e\x00t\x00c\x00h\x00 \x00e\x00a\x00c\x00h\x00 \x00i\x00m\x00a\x00g\x00e\x00 \x00t\x00o\x00 \x00u\x00s\x00e\x00 \x00t\x00h\x00e\x00 \x00f\x00u\x00l\x00l\x00 \x00i\x00n\x00t\x00e\x00n\x00s\x00i\x00t\x00y\x00 \x00r\x00a\x00n\x00g\x00e\x00
+    Method to calculate the minimum intensity:\xff\xfeC\x00u\x00s\x00t\x00o\x00m\x00
+    Method to calculate the maximum intensity:\xff\xfeC\x00u\x00s\x00t\x00o\x00m\x00
+    Lower intensity limit for the input image:\xff\xfe0\x00.\x000\x00
+    Upper intensity limit for the input image:\xff\xfe1\x00.\x000\x00
+    Intensity range for the input image:\xff\xfe0\x00.\x000\x00,\x001\x00.\x000\x00
+    Intensity range for the output image:\xff\xfe0\x00.\x000\x00,\x001\x00.\x000\x00
+    Select image to match in maximum intensity:\xff\xfeN\x00o\x00n\x00e\x00
+    Divisor value:\xff\xfe1\x00.\x000\x00
+    Divisor measurement:\xff\xfeN\x00o\x00n\x00e\x00
+
+RescaleIntensity:[module_num:20|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:\xff\xfeD\x00N\x00A\x00R\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00F\x00o\x00r\x00V\x00i\x00s\x00
+    Name the output image:\xff\xfeR\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00D\x00N\x00A\x00
+    Rescaling method:\xff\xfeS\x00t\x00r\x00e\x00t\x00c\x00h\x00 \x00e\x00a\x00c\x00h\x00 \x00i\x00m\x00a\x00g\x00e\x00 \x00t\x00o\x00 \x00u\x00s\x00e\x00 \x00t\x00h\x00e\x00 \x00f\x00u\x00l\x00l\x00 \x00i\x00n\x00t\x00e\x00n\x00s\x00i\x00t\x00y\x00 \x00r\x00a\x00n\x00g\x00e\x00
+    Method to calculate the minimum intensity:\xff\xfeC\x00u\x00s\x00t\x00o\x00m\x00
+    Method to calculate the maximum intensity:\xff\xfeC\x00u\x00s\x00t\x00o\x00m\x00
+    Lower intensity limit for the input image:\xff\xfe0\x00.\x000\x00
+    Upper intensity limit for the input image:\xff\xfe1\x00.\x000\x00
+    Intensity range for the input image:\xff\xfe0\x00.\x000\x00,\x001\x00.\x000\x00
+    Intensity range for the output image:\xff\xfe0\x00.\x000\x00,\x001\x00.\x000\x00
+    Select image to match in maximum intensity:\xff\xfeN\x00o\x00n\x00e\x00
+    Divisor value:\xff\xfe1\x00.\x000\x00
+    Divisor measurement:\xff\xfeN\x00o\x00n\x00e\x00
+
+GrayToColor:[module_num:21|svn_version:\'Unknown\'|variable_revision_number:3|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Select a color scheme:\xff\xfeR\x00G\x00B\x00
+    Select the image to be colored red:\xff\xfeR\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00D\x00N\x00A\x00
+    Select the image to be colored green:\xff\xfeR\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00A\x00G\x00P\x00
+    Select the image to be colored blue:\xff\xfeR\x00e\x00s\x00c\x00a\x00l\x00e\x00d\x00D\x00N\x00A\x00
+    Name the output image:\xff\xfeC\x00o\x00l\x00o\x00r\x00I\x00m\x00a\x00g\x00e\x00
+    Relative weight for the red image:\xff\xfe1\x00.\x000\x00
+    Relative weight for the green image:\xff\xfe1\x00.\x000\x00
+    Relative weight for the blue image:\xff\xfe1\x00.\x000\x00
+    Select the image to be colored cyan:\xff\xfeL\x00e\x00a\x00v\x00e\x00 \x00t\x00h\x00i\x00s\x00 \x00b\x00l\x00a\x00c\x00k\x00
+    Select the image to be colored magenta:\xff\xfeL\x00e\x00a\x00v\x00e\x00 \x00t\x00h\x00i\x00s\x00 \x00b\x00l\x00a\x00c\x00k\x00
+    Select the image to be colored yellow:\xff\xfeL\x00e\x00a\x00v\x00e\x00 \x00t\x00h\x00i\x00s\x00 \x00b\x00l\x00a\x00c\x00k\x00
+    Select the image that determines brightness:\xff\xfeL\x00e\x00a\x00v\x00e\x00 \x00t\x00h\x00i\x00s\x00 \x00b\x00l\x00a\x00c\x00k\x00
+    Relative weight for the cyan image:\xff\xfe1\x00.\x000\x00
+    Relative weight for the magenta image:\xff\xfe1\x00.\x000\x00
+    Relative weight for the yellow image:\xff\xfe1\x00.\x000\x00
+    Relative weight for the brightness image:\xff\xfe1\x00.\x000\x00
+    Hidden:\xff\xfe1\x00
+    Image name:\xff\xfeN\x00o\x00n\x00e\x00
+    Color:\xff\xfe#\x00f\x00f\x000\x000\x000\x000\x00
+    Weight:\xff\xfe1\x00.\x000\x00
+
+OverlayOutlines:[module_num:22|svn_version:\'Unknown\'|variable_revision_number:4|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:False]
+    Display outlines on a blank image?:\xff\xfeN\x00o\x00
+    Select image on which to display outlines:\xff\xfeC\x00o\x00l\x00o\x00r\x00I\x00m\x00a\x00g\x00e\x00
+    Name the output image:\xff\xfeO\x00v\x00e\x00r\x00l\x00a\x00y\x00
+    Outline display mode:\xff\xfeC\x00o\x00l\x00o\x00r\x00
+    Select method to determine brightness of outlines:\xff\xfeM\x00a\x00x\x00 \x00o\x00f\x00 \x00i\x00m\x00a\x00g\x00e\x00
+    How to outline:\xff\xfeI\x00n\x00n\x00e\x00r\x00
+    Select outline color:\xff\xfew\x00h\x00i\x00t\x00e\x00
+    Select objects to display:\xff\xfeN\x00u\x00c\x00l\x00e\x00i\x00
+    Select outline color:\xff\xfey\x00e\x00l\x00l\x00o\x00w\x00
+    Select objects to display:\xff\xfeC\x00e\x00l\x00l\x00s\x00
+
+SaveImages:[module_num:23|svn_version:\'Unknown\'|variable_revision_number:13|show_window:False|notes:\x5B\x5D|batch_state:array(\x5B\x5D, dtype=uint8)|enabled:True|wants_pause:True]
+    Select the type of image to save:\xff\xfeI\x00m\x00a\x00g\x00e\x00
+    Select the image to save:\xff\xfeO\x00v\x00e\x00r\x00l\x00a\x00y\x00
+    Select method for constructing file names:\xff\xfeF\x00r\x00o\x00m\x00 \x00i\x00m\x00a\x00g\x00e\x00 \x00f\x00i\x00l\x00e\x00n\x00a\x00m\x00e\x00
+    Select image name for file prefix:\xff\xfeO\x00r\x00i\x00g\x00D\x00N\x00A\x00
+    Enter single file name:\xff\xfe\\\x00g\x00<\x00W\x00e\x00l\x00l\x00>\x00_\x00s\x00\\\x00g\x00<\x00S\x00i\x00t\x00e\x00>\x00-\x00-\x00n\x00u\x00c\x00l\x00e\x00i\x00_\x00o\x00u\x00t\x00l\x00i\x00n\x00e\x00s\x00
+    Number of digits:\xff\xfe4\x00
+    Append a suffix to the image file name?:\xff\xfeY\x00e\x00s\x00
+    Text to append to the image name:\xff\xfe_\x00O\x00v\x00e\x00r\x00l\x00a\x00y\x00
+    Saved file format:\xff\xfep\x00n\x00g\x00
+    Output file location:\xff\xfeD\x00e\x00f\x00a\x00u\x00l\x00t\x00 \x00O\x00u\x00t\x00p\x00u\x00t\x00 \x00F\x00o\x00l\x00d\x00e\x00r\x00\x7C\x00o\x00u\x00t\x00l\x00i\x00n\x00e\x00s\x00
+    Image bit depth:\xff\xfe8\x00-\x00b\x00i\x00t\x00 \x00i\x00n\x00t\x00e\x00g\x00e\x00r\x00
+    Overwrite existing files without warning?:\xff\xfeY\x00e\x00s\x00
+    When to save:\xff\xfeE\x00v\x00e\x00r\x00y\x00 \x00c\x00y\x00c\x00l\x00e\x00
+    Record the file and path information to the saved image?:\xff\xfeY\x00e\x00s\x00
+    Create subfolders in the output folder?:\xff\xfeN\x00o\x00
+    Base image folder:\xff\xfeD\x00e\x00f\x00a\x00u\x00l\x00t\x00 \x00I\x00n\x00p\x00u\x00t\x00 \x00F\x00o\x00l\x00d\x00e\x00r\x00
